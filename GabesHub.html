@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="htmlindex">
 
 <head >
   <meta charset="UTF-8">
@@ -10,16 +10,14 @@
 	  <link rel="stylesheet" href="css/style.css">
 	  
 </head>
-	<body id="top">
-	
-		<div class="fixed-close-menus">
+	<body id="top" class="gabe">
+		<div class="fixed-close-menus closemenu-Corrinne">
 			<a href="javascript:;" onmouseover="window.location='GabesHub.html';">
-			<b href="#top" class="menuclose-Gabe">Close <br/>Menu</b></a>
+			<b class="menuclose-Corrinne">Close <br/>Menu</b></a>
 		</div>
-	
 	<br/>
 	
-	<center><a href="index.html" class="red title"><i class="fas fa-cross"></i></a></center>
+	<center><a href="index.html" class="red titleGlow"><i class="fas fa-cross"></i></a></center>
 <!------------------------------ICON header--------------------->
 				<div class="links">
 						<center>
@@ -60,7 +58,7 @@
 						<b style="color: #fff;">|</b>
 						&nbsp;
 						<div class="tooltip">
-						<a class="green" href="#stocks"><i class="fas fa-chart-line"></i></a>
+						<a class="green" href="Stocks.html"><i class="fas fa-chart-line"></i></a>
 						<span class="tooltiptext">STOCK MARKET</span>
 						</div>
 						
@@ -69,8 +67,8 @@
 	
 <!-------------------------------Accordion------------------------------->
 		
-			  <div class="container">
-				<h1 class="title">Gabe's Hub</h1>
+			  <div class="container ">
+				<h1 class="title titleGlow">Gabe's Hub</h1>
 				  
 					  <ul>
 
@@ -122,121 +120,9 @@
 						
 					  </ul>
 				</div>	
-
 		<script  src="js/index.js"></script>
 	</body>
-	
-<!--------------------------------STOCK----------------------------->
-		<footer>
-		
-		<h4 id="stocks" class="title2">Stocks</h4>
-		
-		
-			<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-				  {
-				  "symbols": [
-					{
-					  "title": "S&P 500",
-					  "proName": "INDEX:SPX"
-					},
-					{
-					  "description": "BABA",
-					  "proName": "NYSE:BABA"
-					},
-					{
-					  "description": "NVDA",
-					  "proName": "NASDAQ:NVDA"
-					},
-					{
-					  "description": "AMD",
-					  "proName": "NASDAQ:AMD"
-					},
-					{
-					  "description": "APPLE",
-					  "proName": "NASDAQ:AAPL"
-					},
-					{
-					  "description": "GOLD+",
-					  "proName": "AMEX:JNUG"
-					},
-					{
-					  "description": "GOLD-",
-					  "proName": "AMEX:JDST"
-					},
-					{
-					  "description": "MICRON",
-					  "proName": "NASDAQ:MU"
-					}
-				  ],
-				  "locale": "en"
-				}
-				  </script>
-				</div>
-			<!-- TradingView Widget END -->
-			<div class="margin">
-			<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/screener/" rel="noopener" target="_blank"><span class="blue-text">Stock Screener</span></a> by TradingView</div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-				  {
-				  "width": "100%",
-				  "height": 600,
-				  "defaultColumn": "overview",
-				  "defaultScreen": "most_capitalized",
-				  "market": "america",
-				  "showToolbar": true,
-				  "locale": "en"
-				}
-				  </script>
-				</div>
-			<!-- TradingView Widget END -->
-			
-			<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container">
-				  <div id="tradingview_1f081"></div>
-				  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AMEX-SPY/" rel="noopener" target="_blank"><span class="blue-text">SPY chart</span></a> by TradingView</div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-				  <script type="text/javascript">
-				  new TradingView.widget(
-				  {
-				  "width": "100%",
-				  "height": 600,
-				  "symbol": "AMEX:SPY",
-				  "interval": "D",
-				  "timezone": "Etc/UTC",
-				  "theme": "Light",
-				  "style": "0",
-				  "locale": "en",
-				  "toolbar_bg": "#f1f3f6",
-				  "enable_publishing": false,
-				  "hide_side_toolbar": false,
-				  "allow_symbol_change": true,
-				  "studies": [
-					"BB@tv-basicstudies",
-					"MACD@tv-basicstudies"
-				  ],
-				  "container_id": "tradingview_1f081"
-				}
-				  );
-				  </script>
-				</div>
-			<!-- TradingView Widget END -->
-			</div>
-		</footer>
-		
-		<div class="subfooter">
-				<a href="#top" ><b class="subfootertext">Go to top <i class="fas fa-arrow-up"></i></b></a>
-		</div>
-		
-<!-----SCRIPT----->
-		<script>
-		$(document).ready(function(){
-			$(this).scrollTop(0);
-		});
-		</script>
 </html>
+
+
+

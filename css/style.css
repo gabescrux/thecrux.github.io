@@ -4,9 +4,18 @@
 	height: 100%;
 }
 
+.stocksBackground {
+	background-color: #00b09b; 
+    background-image: linear-gradient(to bottom right, #00b09b,   #96c93d  ); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+}
+
 .index {
 	background-color: #e52d27; 
-    background-image: linear-gradient(to bottom right, #e52d27,  #b31217 ); 
+    background-image: linear-gradient(to bottom right, #e52d27,  #ef817d ); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -23,15 +32,37 @@
 	z-index: -1;
 }
 
+.gabe {
+	background-color: #ee9ca7; 
+    background-image: linear-gradient(to bottom right, #272727, #444444); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+	z-index: -1;
+}
+
+.timedate {
+	background-color: #ee9ca7; 
+    background-image: linear-gradient(to bottom right, #272727, #444444); 
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 120px;
+	z-index: -1;
+
+}
+
 body {
+	background-color: #ee9ca7; 
+    background-image: linear-gradient(to bottom right, #ee9ca7,  #ffdde1 ); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+	z-index: -1;
+	
 	font-family: "Lato", Helvetica, Arial;
 	font-size: 16px;
-	
-	height:1000px;
-	
-	background-color: #272727; 
-    background-image: linear-gradient(to bottom right, #272727, #444444); 
-	z-index: -2;
 }
 
 footer {
@@ -40,6 +71,7 @@ footer {
 	
 	bottom: 0;
 	width: 100%;
+	margin: 0;
 	
 	background-color: #272727; 
     background-image: linear-gradient(to bottom right, #ffffff, #d8d8d8); 
@@ -47,7 +79,9 @@ footer {
 }
 
 .margin {
-	margin: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
 }
 
 .subfooter {
@@ -63,9 +97,6 @@ footer {
 	width: 300px;
 }
 
-.hubs {
-	font-size: 70px;
-}
 .subfootertext:hover {
 	border: solid #fff 2px;
 	border-radius: 5px;
@@ -110,10 +141,19 @@ footer {
 	background-color: #fff;
 }
 
-.subfooter, .subfootertext{
+.subfooter {
 	float: right;
 	margin: 20px auto;
 	margin-right: 20px;
+}
+
+.subfootertext{
+	bottom: 0;
+	right: 0;
+	float: right;
+	margin: 20px auto;
+	margin-right: 20px;
+	
 }
 
 *, *:before, *:after {
@@ -122,7 +162,47 @@ footer {
   border-sizing: border-box;
 }
 
-/*-----------------TOOLTIP----------------*/
+
+/*----------------- top TOOLTIP----------------*/
+.toptooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.toptooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #fff;
+    color: #272727;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 95%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toptooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.toptooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*----------------- bottom TOOLTIP----------------*/
 .tooltip {
     position: relative;
     display: inline-block;
@@ -169,12 +249,18 @@ span {
 	font-size: 20px;
 }
 
-.bigger:hover {
-	font-size: 100px;
-}
+/*---------Random HOVERs------------*/
 
 .blue:hover {
 	color: lightblue;
+}
+
+.strongblue:hover {
+	color: #0084ff; /* messenger blue */
+}
+
+.stronggreen:hover {
+		color: #00DB00; 
 }
 
 .pink:hover {
@@ -193,10 +279,20 @@ span {
 	color: #ff6666;
 }
 
+.titleGlow:hover {
+	text-shadow: 1px 1px 2px #fff, 0 0 25px #fff, 0 0 5px #fff;
+}
+
 a { color:#fff; } 
 
 a:hover { text-decoration: none; color: white; }
 a:hover, a:active { text-decoration: none; color:black }
+
+/*--------------------------*/
+
+.bigger {
+	font-size: 200px;
+}
 
 .links {
 	top: 0;
@@ -223,8 +319,16 @@ a:hover, a:active { text-decoration: none; color:black }
   font-family: 'Pacifico';
   font-size: 90px;
   text-align: center;
-  line-height: 1.4;
+  line-height: .5;
   color: #fff;
+}
+
+.titleGlow {
+	font-family: 'Pacifico';
+	 font-size: 90px;
+	 text-align: center;
+	 line-height: 1.4;
+	 color: #fff;
 }
 
 .title2 {
