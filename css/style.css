@@ -33,6 +33,16 @@
 	z-index: -1;
 }
 
+.messenger {
+	background-color:  #0082c8; 
+    background-image: linear-gradient(to bottom right, #667db6, #0082c8, #0082c8, #667db6); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+	z-index: -1;
+}
+
 .gabe {
 	background-color: #ee9ca7; 
     background-image: linear-gradient(to bottom right, #272727, #444444); 
