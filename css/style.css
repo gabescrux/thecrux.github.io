@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+} 
+
+@-ms-viewport {
+  width: device-width ;
+} 
+
+
 .htmlindex {
 	height: 100%;
 }
