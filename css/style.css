@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
+#shadow {
+	 text-shadow: 2px 2px 5px #272727;
+}
+
 .htmlindex {
 	height: 100%;
 }
@@ -44,8 +48,8 @@
 }
 
 .gabe {
-	background-color: #ee9ca7; 
-    background-image: linear-gradient(to bottom right, #272727, #444444); 
+	background-color:  #0082c8; 
+    background-image: linear-gradient(to bottom right, #667db6, #0082c8, #0082c8, #667db6); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -173,7 +177,59 @@ footer {
   border-sizing: border-box;
 }
 
+/*----------------- right TOOLTIP----------------*/
+.righttooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
 
+.righttooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.righttooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*----------------- left TOOLTIP----------------*/
+.lefttooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.lefttooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+.lefttooltip:hover .tooltiptext {
+    visibility: visible;
+}
 /*----------------- top TOOLTIP----------------*/
 .toptooltip {
     position: relative;
@@ -214,13 +270,13 @@ footer {
 }
 
 /*----------------- bottom TOOLTIP----------------*/
-.tooltip {
+#tooltip {
     position: relative;
     display: inline-block;
    
 }
 
-.tooltip .tooltiptext {
+#tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #fff;
@@ -235,7 +291,7 @@ footer {
     margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
+#tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -246,7 +302,7 @@ footer {
     border-color: transparent transparent #fff transparent;
 }
 
-.tooltip:hover .tooltiptext {
+#tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -334,6 +390,15 @@ a:hover, a:active { text-decoration: none; color:black }
   color: #fff;
 }
 
+.gabestitle {
+  font-family: 'Pacifico';
+  font-size: 60px;
+  text-align: left;
+  top:0;
+  line-height: .5;
+  color: #fff;
+}
+
 .titleGlow {
 	font-family: 'Pacifico';
 	 font-size: 90px;
@@ -353,6 +418,15 @@ a:hover, a:active { text-decoration: none; color:black }
 
 .center {
 	text-align: center;
+}
+
+#rotateme {
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: 100% 0%;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 100% 0%;  
+    position: absolute;
+    right: 100%;
 }
 
 /*-------------ACCORDION code----------*/
