@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
+* {
+	font-family: "Lato", Helvetica, Arial;
+}
+
+.menuItems a{
+	position: absolute;
+		font-size: 40px;
+		z-index: 100;
+}
+
+body {
+	background-color: #ee9ca7; 
+    background-image: linear-gradient(to bottom right, #ee9ca7,  #ffdde1 ); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+	z-index: -1;
+}
+
 #shadow {
 	 text-shadow: 2px 2px 5px #272727;
 }
@@ -65,19 +85,6 @@
     height: 120px;
 	z-index: -1;
 
-}
-
-body {
-	background-color: #ee9ca7; 
-    background-image: linear-gradient(to bottom right, #ee9ca7,  #ffdde1 ); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    height: 100%;
-	z-index: -1;
-	
-	font-family: "Lato", Helvetica, Arial;
-	font-size: 16px;
 }
 
 footer {
@@ -177,59 +184,6 @@ footer {
   border-sizing: border-box;
 }
 
-/*----------------- right TOOLTIP----------------*/
-.righttooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.righttooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 105%;
-}
-
-.righttooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-/*----------------- left TOOLTIP----------------*/
-.lefttooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.lefttooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    right: 105%;
-}
-
-.lefttooltip:hover .tooltiptext {
-    visibility: visible;
-}
 /*----------------- top TOOLTIP----------------*/
 .toptooltip {
     position: relative;
@@ -270,13 +224,13 @@ footer {
 }
 
 /*----------------- bottom TOOLTIP----------------*/
-#tooltip {
+.tooltip {
     position: relative;
     display: inline-block;
    
 }
 
-#tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #fff;
@@ -291,7 +245,7 @@ footer {
     margin-left: -60px;
 }
 
-#tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -302,7 +256,7 @@ footer {
     border-color: transparent transparent #fff transparent;
 }
 
-#tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
