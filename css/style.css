@@ -11,6 +11,12 @@
 		z-index: 100;
 }
 
+.menuItems{
+	position: absolute;
+		font-size: 40px;
+		z-index: 100;
+}
+
 body {
 	background-color: #ee9ca7; 
     background-image: linear-gradient(to bottom right, #ee9ca7,  #ffdde1 ); 
@@ -21,8 +27,13 @@ body {
 	z-index: -1;
 }
 
-#shadow {
-	 text-shadow: 2px 2px 5px #272727;
+.circle:hover {
+	border: solid #fff 3px;
+	border-radius: %50;
+}
+
+#shadow:hover {
+	 text-shadow: 1px 1px 2px #fff, 0 0 25px #fff, 0 0 5px #fff;
 }
 
 .htmlindex {
@@ -50,6 +61,16 @@ body {
 .corrinne {
 	background-color: #ee9ca7; 
     background-image: linear-gradient(to bottom right, #ee9ca7,  #ffdde1 ); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+	z-index: -1;
+}
+
+.steve {
+	background-color: #ED213A; 
+    background-image: linear-gradient(to bottom right, #ED213A,  #93291e ); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -301,7 +322,7 @@ span {
 }
 
 .titleGlow:hover {
-	text-shadow: 1px 1px 2px #fff, 0 0 25px #fff, 0 0 5px #fff;
+	text-shadow: 2px 2px 4px #fff, 0 0 50px #fff, 0 0 10px #fff;
 }
 
 a { color:#fff; } 
@@ -313,6 +334,10 @@ a:hover, a:active { text-decoration: none; color:black }
 
 .bigger {
 	font-size: 200px;
+}
+
+.big {
+	font-size: 40px;
 }
 
 .links {
