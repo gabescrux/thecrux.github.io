@@ -1,0 +1,20 @@
+.btn-act{
+	border-radius:100px;
+	display:inline-block;
+	border:solid #adadad 2px;
+	padding:10px;
+	font-weight:600;
+	background:#f8f8f8;
+	color:#000;
+	float:right;
+  	-webkit-transition: background 1s; 
+  	transition: background 1s;
+  	position:absolute;
+  	margin:5px;
+}
+
+.btn-act:hover{
+	border:solid #adadad 2px;
+	background:#e32626;
+	color:#fff;
+}
