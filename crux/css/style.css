@@ -27,6 +27,10 @@ body {
 	z-index: -1;
 }
 
+.font-size-lg{
+	font-size:50px;
+}
+
 .circle:hover {
 	border: solid #fff 3px;
 	border-radius: %50;
