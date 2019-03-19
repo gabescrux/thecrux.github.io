@@ -24,7 +24,7 @@ body {margin: 0}
 
 .sidenav .b-left:hover {border-left:solid #fff 5px;margin-left:0px}
 
-.sidenav .closebtn {position: absolute;top: 0;right: 25px;font-size: 60px;margin-left: 50px}
+.sidenav .closebtn { line-height: 1.1 !important;color:#fff;position: absolute;top: 0;right: 25px;font-size: 60px;margin-left: 50px;cursor:pointer;}
 
 .sidenav .closebtn:hover {color: red}
 
