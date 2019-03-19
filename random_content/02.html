@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Randomly Rotating Content Using CSS and JavaScript</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<meta name="description" content="Randomly Rotating Content Using CSS and JavaScript"></meta>
+
+<style>
+body {
+	margin:0;
+	padding:40px;
+	background:#fff;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#555;
+	line-height:160%;
+}
+h1{
+	font-size:180%;
+	font-weight:normal;
+	}
+h2{
+	font-size:160%;
+	font-weight:normal;
+	}	
+h3{
+	font-size:140%;
+	font-weight:normal;
+	}	
+img{border:none;}
+pre{
+	display:block;
+	font:12px "Courier New", Courier, monospace;
+	padding:10px;
+	border:1px solid #bae2f0;
+	background:#e3f4f9;	
+	margin:.5em 0;
+	width:600px;
+	}		
+
+/* tips */
+
+#tips, #tips li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#tips{
+	width:250px;
+	font-size:16px;
+	line-height:120%;
+	}
+#tips li{
+	padding:20px;
+	background:#e1e1e1;
+	display:none; /* hide the items at first only to display one with javascript */
+	}
+					
+
+/* // tips */
+
+</style>
+</head>
+<body>
+	
+	<ul id="tips">
+		<li>... if you want to become a better coder you need to eat your vegetables?</li>
+		<li>... it takes more time to code a web page then to make a pizza?</li>
+		<li>... you should validate your code?</li>
+		<li>... jQuery is your friend? For real!</li>
+		<li>... no matter what some people claim, you can't learn CSS in 3 hours?</li>
+	</ul>
+<script type="text/javascript">
+
+this.randomtip = function(){
+
+	var pause = 3000; // define the pause for each tip (in milliseconds) Feel free to make the pause longer so users can have time to read the tips :)
+	var length = $("#tips li").length; 
+	var temp = -1;		
+
+	this.getRan = function(){
+		// get the random number
+		var ran = Math.floor(Math.random()*length) + 1;
+		return ran;
+	};
+	this.show = function(){
+		var ran = getRan();
+		// to avoid repeating tips we need to check 
+		while (ran == temp){
+			ran = getRan();
+		}; 
+		temp = ran;
+		$("#tips li").hide();	
+		$("#tips li:nth-child(" + ran + ")").fadeIn("fast");		
+	};
+	// initiate the script and also set an interval
+	show(); setInterval(show,pause);
+	
+};
+
+$(document).ready(function(){	
+	randomtip();
+});
+</script>
+</body>
+</html>
