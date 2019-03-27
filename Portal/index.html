@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>PORTAL</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+	<header><img style="width:100%;height:auto;"src="images/rs.png"/></header>
+	<div class="nav-bar" style="top:0;width:100%;background-color:#999999;">
+		<ul class="nav-bar-ul">
+			<a href="linkpage.html"><li><img src="images/home.gif"/> Home</li></a>
+
+			<div class="dropdown">
+				<li>Contacts &#x2BC6;</li>
+				<div class="dropdown-content">
+						<a href="linkpage.html">Maritime</a>
+						<a href="linkpage.html">Aviation</a>
+						<a href="linkpage.html">CRCS CADS</a>
+					</div>
+				</div>
+
+					<a href="linkpage.html"><li><img src="images/logout.gif"/> Logout</li></a>
+		</ul>
+		<a class="about" href="linkpage.html">About <span style="border:solid #fff 1px;border-radius:3px;padding:0px 7px;">&#x2139;</span></a>
+	</div>
+	<div class="portal-nav">
+			<a href="linkpage.html">
+					<div class="c--anim-btn">
+						<span>Maritime</span>
+						<span class="c-anim-btn">Access &raquo;</span>
+					</div>
+			</a>
+		<a href="linkpage.html">
+				<div class="c--anim-btn">
+					<span>Aviation</span>
+					<span class="c-anim-btn">Access &raquo;</span>
+				</div>
+		</a>
+		<a href="linkpage.html">
+			<div class="c--anim-btn">
+				<span>CRCS CADS</span>
+				<span class="c-anim-btn">Access &raquo;</span>
+			</div>
+		</a>
+	</div>
+
+							<div class="ann-main" >
+								<div class="container portal-info">
+						<div class="a-m" style="margin-bottom:50px;">
+							<div class="a-m-header">
+								<h3><img class="ann-shake" src="images/phone.png"/> Announcements</h3>
+							</div>
+								<ul class="ann-ul">
+									<li><b>General:</b></li>
+									<li><b>Maritime:</b></li>
+									<li><b>Aviation:</b></li>
+								</ul>
+							</div>
+							<div class="a-m">
+								<div class="a-m-header" style="margin-bottom:30px;">
+									<h3><img src="images/gears.gif"/> Maintenance Windows</h3>
+								</div>
+									<ul class="d-inline-b" style="list-style-type: none;">
+											<li class="bold">Date:</li>
+											<li>NOAH Maritime:</li>
+											<li>NOAH Aviation:</li>
+											<li>CRCS CADS:</li>
+									</ul>
+									<ul class="d-inline-b" style="list-style-type: none;">
+											<li  class="bold">Applications:</li>
+											<li>NOAH Maritime:</li>
+											<li>NOAH Aviation:</li>
+											<li>CRCS CADS:</li>
+									</ul>
+									<ul class="d-inline-b" style="list-style-type: none;">
+											<li class="bold">Descriptions:</li>
+											<li>NOAH Maritime:</li>
+											<li>NOAH Aviation:</li>
+											<li>CRCS CADS:</li>
+									</ul>
+									</div>
+									</div>
+									<div class="text-center disclaimer"> The data contained in this system is Business Sensitive and For Official Use Only (FOUO).
+											The use is responsible for the protection of data extracted, saved or printed from this system. </div>
+							 
+								</div>
+	
+
+	<div class="footer">
+			<ul class="footer-li">
+					<li>Person</li>
+					<li>|</li>
+					<li id="date"></li>
+					<li>|</li>
+					<li>Accessibility/Section 508</li>
+			</ul>
+			<div>This is an OFFICIAL U.S. Navy Website.<br/>
+					This site DOES NOT contain any CLASSIFIED INFORMATION.</div>
+	</div>
+	<script>
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0');
+			var yyyy = today.getFullYear();
+			var hours = today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
+        var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+        hours = hours < 10 ? "0" + hours : hours;
+        var minutes = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
+        var seconds = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
+        var time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
+			today = mm + '/' + dd + '/' + yyyy + " " + time;
+			document.getElementById("date").innerHTML = today;
+	</script>
+</body>
+</html>
