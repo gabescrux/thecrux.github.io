@@ -13,8 +13,16 @@
 			<a href="contacts.html"><li>Contacts</li></a>
 					<a href="linkpage.html"><li><img src="images/logout.gif"/> Logout</li></a>
 		</ul>
-		<a class="about" href="linkpage.html">About <span style="border:solid #fff 1px;border-radius:3px;padding:0px 7px;">&#x2139;</span></a>
-	</div>
+		<div class="dropdown">
+				<span class="about" href="linkpage.html" class="tooltip">
+					About <span style="border:solid #fff 1px;border-radius:3px;padding:0px 7px;">&#x2139;</span>
+				</span>
+				<div class="dropdown-content">
+					<p><div class="release-head">Release:
+						</div><div class="release-body">alpha</div></p>
+				</div>
+			</div>	
+		</div>
 	<div class="portal-nav">
 			<a href="linkpage.html">
 					<div class="c--anim-btn">
@@ -90,30 +98,25 @@
 								</div>
 	
 
-	<div class="footer">
-			<ul class="footer-li">
-					<li>Person</li>
-					<li>|</li>
-					<li id="date"></li>
-					<li>|</li>
-					<li>Accessibility/Section 508</li>
-			</ul>
-			<div>This is an OFFICIAL U.S. Navy Website.<br/>
-					This site DOES NOT contain any CLASSIFIED INFORMATION.</div>
-	</div>
-	<script>
-			var today = new Date();
-			var dd = String(today.getDate()).padStart(2, '0');
-			var mm = String(today.getMonth() + 1).padStart(2, '0');
-			var yyyy = today.getFullYear();
-			var hours = today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
-        var am_pm = today.getHours() >= 12 ? "PM" : "AM";
-        hours = hours < 10 ? "0" + hours : hours;
-        var minutes = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
-        var seconds = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
-        var time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
-			today = mm + '/' + dd + '/' + yyyy + " " + time;
-			document.getElementById("date").innerHTML = today;
-	</script>
+								<div class="footer">
+										<div class="row">
+								
+											<div class="col-lg-6">
+												<ul class="footer-li dis-left">
+														<li>Person</li>
+														<li>|</li>
+														<li id="date"></li>
+														<li>|</li>
+														<li>Accessibility/Section 508</li>
+												</ul>
+											</div>
+								
+											<div class="col-lg-6">
+												<div class="dis-right">This is an OFFICIAL U.S. Navy Website.<br/>This site DOES NOT contain any CLASSIFIED INFORMATION.</div>
+											</div>
+								
+										</div>
+									</div>
+	<script  src="js/index.js"></script>
 </body>
 </html>

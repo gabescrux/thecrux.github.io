@@ -24,6 +24,10 @@ display:inline;
 padding:9px 20px;
 }
 
+.contacts-head li{
+    display:inline;
+}
+
 .nav-bar li:hover{
 background-color:#cccccc;
 }
@@ -102,24 +106,29 @@ font-weight:900;
 .footer-li li{
 display:inline;
 bottom:0;
-padding:5px;
+/* padding:5px; */
 }
 
 .footer{
 background-color:#cccccc;
 width:100%;
 bottom:0;
-padding-top:20px;
-padding-bottom:5px;
+font-size:12px;
 color:#153887
 }
 
-.footer div{
-float:right;
-text-align: right;
-position:relative;
-padding-right:40px;
-margin-top:-40px
+.dis-left{
+    text-align:left;
+    padding-top:20px;
+}
+
+.dis-right{
+    float:right;
+    text-align: right;
+    position:relative; 
+    margin-right:30px;
+    padding-top:10px;
+    
 }
 
 .ann-ul{
@@ -175,15 +184,6 @@ font-size:12px;
 padding:20px
 }
 
-
-.about{
-padding:7px 20px;float:right; list-style-type: none; color:#fff;text-decoration: none;
-}
-
-.about:hover{
-background-color:#cccccc;
-}
-
 .ann-shake {
 animation: shake 20s;
 animation-iteration-count: infinite;
@@ -202,3 +202,49 @@ animation-iteration-count: infinite;
 90% { transform: translate(1px, 2px) rotate(0deg); }
 100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+    .dropdown {
+    position: absolute;  
+    display: inline-block;
+    right:0
+    }
+  
+    .dropdown-content {
+    text-align:center;
+    border-radius:0px 0px 4px 4px;
+    margin-top:35px;
+    display: none; 
+    position: relative;
+    background-color: #f9f9f9;
+    width: 134px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    .dropdown-content .release-body{
+        width:100%;
+        height:auto;
+        font-size: 20px;
+        padding:10px;
+        }
+    .dropdown-content .release-head{
+        padding:10px;
+        width:100%;
+        height:auto;
+        background-color: #e0e0e0;
+        }
+  
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    .about{
+    padding:7px 30px;
+    float:right; 
+    margin-right:20px;
+    color:#fff;
+    
+    }
+    
+    .about:hover{
+    background-color:#cccccc;
+    }
