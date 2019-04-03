@@ -1,52 +1,76 @@
 <html>
-<head>
-<title>CRUX</title>
-<style>
-body{
-background-color:#fff;
+    <head>
+    <title>
+    Login page
+    </title>
+    <style>
+    body{
+        background-color: #838383; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, #838383, #fff);
+        margin:0;
+        padding:0;
+        background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    }
+    div{
+       
+        height:245px;
+        width:245px;
+        margin:auto;
+        /* top:50%;left: 50%;transform: translate(-50%, -50%); */
+        padding-top:100px;
+        line-height:0em;
+        color:#fff;
+    }
+    div p{
+        padding-left:15px;
+    }
+    form{
+        background:#3d3d3d;
+        padding:20px;
+        border-radius:5px;
+        box-shadow:2px 2px 30px black;
+    }
+    input{
+        background:#787878;
+        border:none;
+        padding:10px;
+        margin:10px;
+        border-radius:5px;
+    }
+    input[type="text"]{
+        box-shadow:2px 2px 3px black inset;
+    }
+    input[type="password"]{
+        box-shadow:2px 2px 3px black inset;
+    }
+    input[type="button"]{
+        box-shadow:2px 2px 3px black
+    }
+    input[type="button"]:hover{
+        box-shadow:0px 0px 0px black;
+        cursor:pointer
+    }
+h1{
+    text-align:center;
+    padding:50px;
+    background:#787878;
 }
-a {
-	font-size: 40px;
-	font-weight: 900;
-	color:#000;
-	
-}
-
-a:hover{
-color:gray;
-}
-.header{
-padding:20px;
-text-align:center;
-background-color:#e32625;
-color:#fff;
-font-size:60px;
-}
-body ul{
-padding:20px;
-}
-.ul-head{
-	font-size:80px;
-    font-weight:900;
-}
-</style>
-</head>
-<body>
-<div class="header">Root Dir - Quick Links</div>
-<br/><br/><br/>
-<div class="ul-head">Personal</div>
-	<ul>
-		<li><a href="servingsilent/clouds/index.html">ServingSilent / clouds / index.html</a></li>
-		<li><a href="crux/index.html">crux / index.html</a></li>
-		<li><a href="crux/GabesHub.html">crux / GabesHub.html</a></li>
-		<li><a href="random_content/02.html">random_content / 02.html</a></li>
-		<li><a href="random_content/01.html">random_content / 01.html</a></li>
-		<li><a href="carousel/index.html">carousel / index.html</a></li>
-	</ul>
-<br/><br/><br/>
-<div class="ul-head">Work Experiments</div>
-	<ul>
-		<li><a href="Portal/index.html">portal / index.html</a></li>
-	</ul>
-</body>
-</html>
+    </style>
+    </head>
+    <body>
+<h1> Login For Root
+</h1>
+     <div>
+        <form name="login">
+        <p>Username</p><input type="text" name="userid"/>
+        <p>Password</p><input type="password" name="pswrd"/>
+        <input type="button" onclick="check(this.form)" value="Login"/>
+    
+        </form>
+    </div>
+    <script  src="up.js"></script>
+    </body>
+    </html>
