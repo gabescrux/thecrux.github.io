@@ -988,6 +988,12 @@ pre code {
   }
 }
 
+.basic-card{
+  background-color:#f2f2f2;
+  padding:20px;
+  border-radius:4px;
+}
+
 @media (min-width: 768px) {
   .col-md {
     -ms-flex-preferred-size: 0;
@@ -2415,6 +2421,10 @@ fieldset:disabled a.btn {
 .btn-primary:hover {
   color: #000;
   background-color: #f8f8f8;
+}
+
+.btn-hover-border:hover{
+border:solid black 1px;
 }
 
 .btn-primary:focus, .btn-primary.focus {
