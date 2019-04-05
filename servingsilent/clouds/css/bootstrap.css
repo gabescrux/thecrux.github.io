@@ -994,6 +994,63 @@ pre code {
   border-radius:4px;
 }
 
+.basic-card a{
+  margin-top:20px;
+}
+
+.basic-cloud{
+  font-size:250px;
+  text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color:#fff;
+  height:280px;
+}
+
+.rand-card-cloud{
+  font-size:20px;
+  color:#000;
+  font-weight:600;
+  margin:-150px 0px 0px 10px;
+  padding:0px 50px 0px 50px;
+  position:relative;
+  width:300px;
+}
+
+@media (max-width:466px){
+  .rand-card-cloud{
+    font-size:15px;
+    margin:-130px 0px 0px 10px;
+    padding:10px 110px 0px 50px;
+  }
+  .basic-cloud{
+    font-size:200px;
+    height:250px;
+  }
+}
+
+@media (max-width:400px){
+  .rand-card-cloud{
+    font-size:15px;
+    margin:-110px 0px 0px 0px;
+    padding:10px 110px 0px 50px;
+  }
+  .basic-cloud{
+    font-size:170px;
+    height:200px;
+  }
+}
+
+@media (max-width:360px){
+  .rand-card-cloud{
+    font-size:13px;
+    margin:-110px 0px 0px 0px;
+    padding:30px 130px 0px 30px;
+  }
+  .basic-cloud{
+    font-size:150px;
+    height:200px;
+  }
+}
+
 @media (min-width: 768px) {
   .col-md {
     -ms-flex-preferred-size: 0;
