@@ -2576,6 +2576,10 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
+.menu-btn:hover{
+  color: rgba(255, 255, 255, 0.75);
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   .btn {
     -webkit-transition: none;
@@ -4343,6 +4347,12 @@ input[type="button"].btn-block {
   list-style: none;
 }
 
+.user-info{
+  right:10px;
+  top:5px;
+  color: rgba(255, 255, 255, 0.5)
+}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
@@ -4894,6 +4904,13 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card:hover{
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.0) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.0) !important;
 }
 
 .card > hr {
@@ -6827,7 +6844,8 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #2b6db0 !important;
+  background-image: linear-gradient(to bottom right,#2b6db0, #558abf);
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10487,8 +10505,10 @@ body {
 
 .sidebar {
   width: 90px !important;
-  background-color: #212529;
+  background-color: #2b6db0;
+  background-image: linear-gradient(to bottom right,#2b6db0, #558abf);
   min-height: calc(100vh - 56px);
+  border-top:solid #fff 1px;
 }
 
 .sidebar .nav-item:last-child {

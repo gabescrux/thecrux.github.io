@@ -14,3 +14,27 @@ var myPieChart = new Chart(ctx, {
     }],
   },
 });
+
+var ctx2 = document.getElementById("myPieChart2");
+var myPieChart = new Chart(ctx2, {
+  type: 'pie',
+  data: {
+    labels: ["Blue", "Red", "Yellow", "Green"],
+    datasets: [{
+      data: [12.21, 15.58, 11.25, 8.32],
+      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+    }],
+  },
+});
+
+var ctx3 = document.getElementById("myPieChart3");
+var myPieChart = new Chart(ctx3, {
+  type: 'pie',
+  data: {
+    labels: ["Blue", "Red", "Yellow", "Green"],
+    datasets: [{
+      data: [12.21, 15.58, 11.25, 8.32],
+      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+    }],
+  },
+});
