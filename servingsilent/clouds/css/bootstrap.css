@@ -1015,20 +1015,26 @@ pre code {
 }
 
 .basic-cloud{
-  font-size:340px;
+  font-size: 240px;
   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   color:#fff;
-  height:380px;
+  height:180px;
+  /* text-align:center;
+  margin-right:-5px; */
+  margin:100px -165px 0px 0px;
+  left:50%;
+  right:50%;
+  transform: translate(-50%, -50%)
 }
 
 .rand-card-cloud{
-  font-size:30px;
+  font-size:25px;
   color:#000;
   font-weight:300;
-  margin:-190px 0px 0px 0px;
-  padding:0px 10px 0px 60px;
+  margin:-140px 0px 0px 0px;
+  padding:0px 10px 0px 10px;
   position:relative;
-  width:380px;
+  width:300px;
 }
 
 @media (min-width: 768px) {
@@ -2510,18 +2516,18 @@ border:solid black 1px;
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #00E500;
+  border-color: #00E500;
 }
 
 .btn-success:hover {
-  color: #fff;
-  background-color: #218838;
-  border-color: #1e7e34;
+  color: #000;
+  background-color: #f8f8f8;
 }
 
 .btn-success:focus, .btn-success.focus {
-  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+  background-color: #f8f8f8;
+	color:#000
 }
 
 .btn-success.disabled, .btn-success:disabled {
@@ -2549,13 +2555,13 @@ border:solid black 1px;
 }
 
 .btn-info:hover {
-  color: #fff;
-  background-color: #138496;
-  border-color: #117a8b;
+  color: #000;
+  background-color: #f8f8f8;
 }
 
 .btn-info:focus, .btn-info.focus {
-  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+  color: #000;
+  background-color: #f8f8f8;
 }
 
 .btn-info.disabled, .btn-info:disabled {
@@ -2577,19 +2583,19 @@ border:solid black 1px;
 }
 
 .btn-warning {
-  color: #212529;
+  color: #fff;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 
 .btn-warning:hover {
-  color: #212529;
-  background-color: #e0a800;
-  border-color: #d39e00;
+  background-color: #f8f8f8;
+	color:#000
 }
 
 .btn-warning:focus, .btn-warning.focus {
-  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+  background-color: #f8f8f8;
+	color:#000
 }
 
 .btn-warning.disabled, .btn-warning:disabled {
@@ -3016,6 +3022,10 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+}
+
+.btn-padding{
+  padding:10px 20px 10px 20px;
 }
 
 .fade {
