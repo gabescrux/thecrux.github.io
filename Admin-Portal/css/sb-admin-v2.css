@@ -53,6 +53,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -3302,9 +3303,9 @@ input[type="button"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #ccc;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
   border-radius: 0.25rem;
 }
 
@@ -3344,6 +3345,7 @@ input[type="button"].btn-block {
 .dropdown-menu-left {
   right: auto;
   left: 0;
+  margin-left:-20px;
 }
 
 @media (min-width: 576px) {
