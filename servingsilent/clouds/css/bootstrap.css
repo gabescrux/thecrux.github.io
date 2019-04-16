@@ -161,11 +161,12 @@ a:not([href]):not([tabindex]):focus {
 }
 
 a{
-  color:#e32625
+  color:#000
 }
 
 a:hover{
-  text-decoration: none
+  text-decoration: none;
+  color:#e32625
 }
 
 .white-text{
