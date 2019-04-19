@@ -28,7 +28,7 @@ body { font-family: sans-serif; }
 .gallery-cell {
   min-width: 320px;
   min-height: 200px;
-  margin-right: 10px;
+  margin-right: 1px;
 }
 
 /* cell number */
