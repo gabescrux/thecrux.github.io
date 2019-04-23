@@ -6635,17 +6635,11 @@ button.bg-dark:focus {
 
 @media (max-width: 767px) {
   .img-centered {
+    max-width:300px;
     position:relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
-  } 
-  .img-centered-2 {
-    
-    /* position:relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) */
   } 
 }
 
