@@ -55,17 +55,12 @@ body {margin: 0}
 }
 
 .h1-title{
-  border-radius:5px;
-  background-color:rgba(0,0,0,0.4);
-  padding:15px;
+	width: 100%;
+  height:auto;
+  margin:0 auto;
+  margin-top:-300px;
   position: absolute; 
-  font-weight:900;
-  font-size:5vw;
-  color:#fff;
-  text-shadow:0px 0px 10px #000;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+ 
 }
 
 .h1-title h1{
@@ -82,11 +77,6 @@ body {margin: 0}
 
 .shake2{
 	animation: shake1 20s;
-  animation-iteration-count: infinite;
-}
-
-.shake-hover:hover{
-	animation: shake1 5s;
   animation-iteration-count: infinite;
 }
 
@@ -302,39 +292,7 @@ body {margin: 0}
 	z-indeX: -1;
 }
 
-.cloud-red {
-	background: #ec6969;
-	background: -moz-linear-gradient(top,  #ec6969 5%, #e32625 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#ec6969), color-stop(100%,#e32625));
-	background: -webkit-linear-gradient(top,  #ec6969 5%,#e32625 100%);
-	background: -o-linear-gradient(top,  #ec6969 5%,#e32625 100%);
-	background: -ms-linear-gradient(top,  #ec6969 5%,#e32625 100%);
-	background: linear-gradient(top,  #ec6969 5%,#e32625 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec6969', endColorstr='#e32625',GradientType=0 );
-	
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
-	
-	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-
-	font-size:70px;
-	color:#fff;
-	height: 120px;
-	position: relative;
-	width: 350px;
-}
-
-.cloud-red:after, .cloud-red:before {
-    background: #ec6969;
-	content: '';
-	position: absolute;
-	z-indeX: -1;
-}
-
-.cloud:after, .cloud-red:after {
+.cloud:after {
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	border-radius: 100px;
@@ -345,7 +303,7 @@ body {margin: 0}
 	width: 100px;
 }
 
-.cloud:before, .cloud-red:before {
+.cloud:before {
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 	border-radius: 200px;

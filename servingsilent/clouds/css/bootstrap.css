@@ -2546,6 +2546,11 @@ fieldset:disabled a.btn {
   border-bottom: solid #fff 2px
 }
 
+.lb-r{
+  border-left: solid #e32625 4px;
+  margin-left: 20px
+}
+
 .btn-warning {
   color: #fff;
   background-color: #ffc107;
