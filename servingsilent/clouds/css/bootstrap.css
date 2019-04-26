@@ -128,6 +128,29 @@ blockquote {
   margin: 0 0 1rem;
 }
 
+.blockquote-sqr-rgt{
+  font-size:20px;
+  font-weight:600;
+  float:right;
+  height:auto;
+  width:200px;
+  word-wrap:break-word;
+  margin:0px 10px 0px 10px;
+  padding:10px;
+  overflow-y:hidden
+}
+.blockquote-sqr-lft{
+  font-size:20px;
+  font-weight:600;
+  float:left;
+  height:auto;
+  width:200px;
+  word-wrap:break-word;
+  margin:0px 10px 0px 10px;
+  padding:10px;
+  overflow-y:hidden
+}
+
 b,
 strong {
   font-weight: bolder;
