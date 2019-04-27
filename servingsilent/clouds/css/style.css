@@ -83,6 +83,11 @@ body {margin: 0}
   animation-iteration-count: infinite;
 }
 
+.shake-hover:hover{
+	animation: shake1 5s;
+  animation-iteration-count: infinite;
+}
+
 @keyframes shake1 {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
