@@ -19,57 +19,7 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-v2.css" rel="stylesheet">
-<style>
-.disclaimer{
-bottom:0; 
-width:100%;
-font-size:12px;
-padding:20px
-}
-.footer-li li{
-display:inline;
-bottom:0;
-}
-.dis-left{
-    text-align:left;
-    padding-top:20px;
-}
-.dis-right{
-    float:right;
-    text-align: right;
-    position:relative; 
-    padding-top:10px;
-}
-.nav-bar{
-height:35px;
-top:0;width:100%;background-color:#999999;
-}
-.nav-bar-ul{
-    margin-top:5px;
-    float:left;
-    color:#fff;
-}
 
-.nav-bar-ul a{
-    cursor: pointer;
-    list-style-type: none;
-    text-decoration: none;
-    text-decoration-color: #fff;
-    color:#fff;
-}
-.nav-bar-ul li{
-display:inline;
-padding:9px 20px;
-}
-
-.contacts-head li{
-    display:inline;
-}
-
-.nav-bar li:hover{
-background-color:#cccccc;
-}
-</style>
 </head>
 
 <body id="page-top">
@@ -80,26 +30,24 @@ background-color:#cccccc;
       
 			<a><li class="dropdown no-arrow">
         <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="width:18px;height:auto;" src="images/tables.png"/> <span>Users grids &nbsp&nbsp&nbsp&nbsp<img style="width:20px;height:auto;" src="images/profile.png"/> Edit / New Users</span>
+            <img style="width:18px;height:auto;" src="images/tables.png"/> <span>Users grids
         </a>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#noah-maritime-table">NOAH-Maritime</a>
-            <a class="dropdown-item" href="#noah-aviation-table">NOAH-Aviation</a>
-            <a class="dropdown-item" href="#crcs-cads-table">CRCS-CADS</a>
+            <a class="dropdown-item" href="#noah-maritime-table1">NOAH-Maritime</a>
+            <a class="dropdown-item" href="#noah-aviation-table1">NOAH-Aviation</a>
+            <a class="dropdown-item" href="#crcs-cads-table1">CRCS-CADS</a>
         </div>
       </li></a>
-
-      <!-- <a><li class="dropdown no-arrow">
+      <a><li class="dropdown no-arrow">
         <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="width:18px;height:auto;" src="images/menu-bars.gif"/> <span>More</span>
+            <img style="width:20px;height:auto;" src="images/profile.png"/> Edit / New Users</span>
         </a>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#noah-maritime-table">NOAH-Maritime</a>
-            <a class="dropdown-item" href="#noah-aviation-table">NOAH-Aviation</a>
-            <a class="dropdown-item" href="#crcs-cads-table">CRCS-CADS</a>
+            <a class="dropdown-item" href="#noah-maritime-user">NOAH-Maritime</a>
+            <a class="dropdown-item" href="#noah-aviation-user">NOAH-Aviation</a>
+            <a class="dropdown-item" href="#crcs-cads-user">CRCS-CADS</a>
         </div>
-      </li></a> -->
-
+      </li></a>
 			<a href="#"><li><img src="images/logout.gif"/> Logout</li></a>		
 		</ul>
 
@@ -110,14 +58,6 @@ background-color:#cccccc;
     <div id="content-wrapper">
 
       <div class="container-fluid">
-
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li id="overview" class="breadcrumb-item active">Overview</li>
-        </ol>
 
         <!-- Icon Cards-->
         <div class="row">
@@ -159,32 +99,7 @@ background-color:#cccccc;
             </div>
           </div>
 
-      
-  <!-- <div class="row">
-    <div class="d-inline-block card mb-3"style="margin-left:15px;height:405px;width:405px;">
-        <div class="card-header">
-          <i class="fas fa-chart-pie"></i>
-          Pie Chart Example</div>
-        <div class="card-body">
-          <canvas id="myPieChart"width="300px" height="260px"></canvas>
-        </div>
-      </div>
-    <div class="col">
-        <div class="col-1">
-          
-          <div class="card text-white bg-primary o-hidden d-inline-block" style="width:200px;height:200px;">
-            <h5 class="card-header">My work items </h5><br/>
-              <a style="position:absolute;top:55%;left:50%;transform:translate(-50%, -50%);font-size:100px;">5</a>           
-          </div>
-          
-            <div class="card text-white bg-primary o-hidden d-inline-block" style="width:200px;height:200px;">
-                <h5 class="card-header">NOAH-Maritime Version</h5>
-                  <a style="position:absolute;top:55%;left:50%;transform:translate(-50%, -50%);font-size:100px;">1.9</a>
-            </div>
-        </div>  
-    </div>
-  </div>     -->
-  
+<div style="height:700px"></div>
   <!-- Breadcrumbs-->
   <ol class="breadcrumb mt-5">
       <li class="breadcrumb-item">
@@ -193,10 +108,9 @@ background-color:#cccccc;
       <li class="breadcrumb-item">
           <a href="#overview">Overview</a>
       </li>
-      <li id="noah-maritime-table" class="breadcrumb-item active">NOAH-Maritime Users Grid</li>
+      <li id="noah-maritime-table" class="breadcrumb-item active">NOAH-Maritime</li>
     </ol>
 
-    <!-- <h2 class="mb-4 mt-4">NOAH-Maritime User Table</h2> -->
     <div class="mb-4">
         <div class="card text-white bg-primary o-hidden h-100">
           <a class="card-footer text-white clearfix small z-1" href="#noah-maritime-table">
@@ -204,13 +118,13 @@ background-color:#cccccc;
             <div class="card-body-icon">
               <i class="fas fa-anchor"></i>
             </div>
-            <h2 class="mr-5">NOAH-Maritime Users Grid</h2>
+            <h2 class="mr-5">NOAH-Maritime</h2>
           </div>
           </a>
         </div>
       </div>
-
-      <div class="card mb-4" style=" background-color:#e9ecef;">
+ 
+      <div id="noah-maritime-user" class="card mb-4" style=" background-color:#e9ecef;">
         <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
         <div class="card-body">
         <form>
@@ -283,7 +197,7 @@ background-color:#cccccc;
         </div>
               </div>
 
-    <div class="card mb-3">
+    <div id="noah-maritime-table1" class="card mb-3">
         <div class="card-header">
           <img style="width:18px;height:auto;" src="images/tables2.png"/> NOAH-Maritime Users</div>
         <div class="card-body">
@@ -782,9 +696,9 @@ background-color:#cccccc;
           <a href="#overview">Overview</a>
       </li>
       <li class="breadcrumb-item">
-          <a href="#noah-maritime-table">NOAH-Maritime Users Grid</a>
+          <a href="#noah-maritime-table">NOAH-Maritime</a>
       </li>
-      <li id="noah-aviation-table" class="breadcrumb-item active">NOAH-Aviation Users Grid</li>
+      <li id="noah-aviation-table" class="breadcrumb-item active">NOAH-Aviation</li>
     </ol>
 
     <div class="mb-4">
@@ -794,13 +708,13 @@ background-color:#cccccc;
             <div class="card-body-icon">
               <i class="fas fa-fighter-jet"></i>
             </div>
-            <h2 class="mr-5">NOAH-Aviation Users Grid</h2>
+            <h2 class="mr-5">NOAH-Aviation</h2>
           </div>
           </a>
         </div>
       </div>
 
-      <div class="card mb-4" style=" background-color:#e9ecef;">
+<div id="noah-aviation-user"class="card mb-4" style=" background-color:#e9ecef;">
 <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
 <div class="card-body">
 <form>
@@ -873,7 +787,7 @@ background-color:#cccccc;
 </div>
       </div>
 
-    <div class="card mb-3">
+    <div id="noah-aviation-table1"class="card mb-3">
         <div class="card-header">
             <img style="width:18px;height:auto;" src="images/tables2.png"/> NOAH-Aviation Users
           </div>
@@ -1373,12 +1287,12 @@ background-color:#cccccc;
           <a href="#overview">Overview</a>
       </li>
       <li class="breadcrumb-item">
-          <a href="#noah-maritime-table">NOAH-Maritime Users Grid</a>
+          <a href="#noah-maritime-table">NOAH-Maritime</a>
       </li>
       <li class="breadcrumb-item">
-          <a href="#noah-aviation-table">NOAH-Aviation Users Grid</a>
+          <a href="#noah-aviation-table">NOAH-Aviation</a>
       </li>
-      <li id="crcs-cads-table" class="breadcrumb-item active">CRCS-CADS Users Grid</li>
+      <li id="crcs-cads-table" class="breadcrumb-item active">CRCS-CADS</li>
     </ol>
 
     <div class="mb-4">
@@ -1388,13 +1302,13 @@ background-color:#cccccc;
               <div class="card-body-icon">
                   <i class="fas fa-fighter-jet"></i>
                 </div>
-            <h2 class="mr-5">CRCS-CADS Users Grid</h2>
+            <h2 class="mr-5">CRCS-CADS</h2>
           </div>
           </a>
         </div>
       </div>
 
-      <div class="card mb-4" style=" background-color:#e9ecef;">
+      <div id="crcs-cads-user"class="card mb-4" style=" background-color:#e9ecef;">
         <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
         <div class="card-body">
         <form>
@@ -1467,7 +1381,7 @@ background-color:#cccccc;
         </div>
               </div>
 
-    <div class="card mb-5">
+    <div id="crcs-cads-table1"class="card mb-5">
         <div class="card-header">
           <i class="fas fa-table"></i>
           CRCS-CADS Users</div>
@@ -2020,21 +1934,12 @@ background-color:#cccccc;
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
   <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
-
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
