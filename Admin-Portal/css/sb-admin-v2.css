@@ -10761,3 +10761,53 @@ body.sidebar-toggled footer.sticky-footer {
     width: 100%;
   }
 }
+
+.disclaimer{
+  bottom:0; 
+  width:100%;
+  font-size:12px;
+  padding:20px
+  }
+  .footer-li li{
+  display:inline;
+  bottom:0;
+  }
+  .dis-left{
+      text-align:left;
+      padding-top:20px;
+  }
+  .dis-right{
+      float:right;
+      text-align: right;
+      position:relative; 
+      padding-top:10px;
+  }
+  .nav-bar{
+  height:35px;
+  top:0;width:100%;background-color:#999999;
+  }
+  .nav-bar-ul{
+      margin-top:5px;
+      float:left;
+      color:#fff;
+  }
+  
+  .nav-bar-ul a{
+      cursor: pointer;
+      list-style-type: none;
+      text-decoration: none;
+      text-decoration-color: #fff;
+      color:#fff;
+  }
+  .nav-bar-ul li{
+  display:inline;
+  padding:9px 20px;
+  }
+  
+  .contacts-head li{
+      display:inline;
+  }
+  
+  .nav-bar li:hover{
+  background-color:#cccccc;
+  }
