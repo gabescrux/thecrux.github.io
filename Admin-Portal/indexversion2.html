@@ -23,35 +23,51 @@
 </head>
 
 <body id="page-top">
-  <header><img style="width:100%;height:auto;"src="images/rs.png"/></header>
+
+
 	<div class="nav-bar">
 		<ul class="nav-bar-ul container">
-      <a href="index.html"><li><img src="images/home.gif"/> Home</li></a>
-      
-			<a><li class="dropdown no-arrow">
+		
+      <a href="#"><li><img src="images/home.gif"/> Home</li></a>
+      	
+      <div class="dropdown">
+        
         <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="width:18px;height:auto;" src="images/tables.png"/> <span>Users grids
-        </a>
-        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="messagesDropdown">
+        <img style="width:18px;height:auto;" src="images/tables.png"/> <span>Users grids</a>
+        
+        <div class="dropdown-content">
             <a class="dropdown-item" href="#noah-maritime-table1">NOAH-Maritime</a>
             <a class="dropdown-item" href="#noah-aviation-table1">NOAH-Aviation</a>
             <a class="dropdown-item" href="#crcs-cads-table1">CRCS-CADS</a>
         </div>
-      </li></a>
-      <a><li class="dropdown no-arrow">
-        <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="width:20px;height:auto;" src="images/profile.png"/> Edit / New Users</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="messagesDropdown">
+      </div>
+      
+      <div class="dropdown">
+      <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img style="width:20px;height:auto;" src="images/profile.png"/> Edit / New Users</span></a>
+      
+      <div class="dropdown-content">
             <a class="dropdown-item" href="#noah-maritime-user">NOAH-Maritime</a>
             <a class="dropdown-item" href="#noah-aviation-user">NOAH-Aviation</a>
             <a class="dropdown-item" href="#crcs-cads-user">CRCS-CADS</a>
         </div>
+<<<<<<< HEAD
       </li></a>
 			<a onclick="windowClose();"><li><img src="images/logout.gif"/> Logout</li></a>		
+=======
+      </div>
+		
+	  <a href="#"><li><img src="images/logout.gif"/> Logout</li></a>		
+		
+>>>>>>> 0f98d444edd53219fdbf09fe6d4f0d8b932af8ed
 		</ul>
-
 		</div>
+		
+		
+  <header>
+  <img style="width: 100%; height: auto; margin-top: 35px;" src="images/rs.png"/>
+  </header>
+
   
   <div id="wrapper" class="container">
 
@@ -98,6 +114,7 @@
               </div>
             </div>
           </div>
+          
 
 <div style="height:700px"></div>
   <!-- Breadcrumbs-->
@@ -108,6 +125,8 @@
       <li id="noah-maritime-table" class="breadcrumb-item active">NOAH-Maritime</li>
     </ol>
 
+	<section id="noah-maritime-user" style="position: relative; top: -45px;"></section>
+	
     <div class="mb-4">
         <div class="card text-white bg-primary o-hidden h-100">
           <a class="card-footer text-white clearfix small z-1" href="#noah-maritime-table">
@@ -121,7 +140,7 @@
         </div>
       </div>
  
-      <div id="noah-maritime-user" class="card mb-4" style=" background-color:#e9ecef;">
+      <div class="card mb-4" style="background-color:#e9ecef;">
         <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
         <div class="card-body">
         <form>
@@ -194,7 +213,9 @@
         </div>
               </div>
 
-    <div id="noah-maritime-table1" class="card mb-3">
+    <section id="noah-maritime-table1" style="position: relative; top: -36px;"></section>
+    
+    <div class="card mb-3">
         <div class="card-header">
           <img style="width:18px;height:auto;" src="images/tables2.png"/> NOAH-Maritime Users</div>
         <div class="card-body">
@@ -695,6 +716,8 @@
       <li id="noah-aviation-table" class="breadcrumb-item active">NOAH-Aviation</li>
     </ol>
 
+    <section id="noah-aviation-user" style="position: relative; top: -45px;"></section>
+    
     <div class="mb-4">
         <div class="card text-white bg-warning o-hidden h-100">
           <a class="card-footer text-white clearfix small z-1" href="#noah-aviation-table">
@@ -708,7 +731,7 @@
         </div>
       </div>
 
-<div id="noah-aviation-user"class="card mb-4" style=" background-color:#e9ecef;">
+<div class="card mb-4" style=" background-color:#e9ecef;">
 <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
 <div class="card-body">
 <form>
@@ -781,7 +804,9 @@
 </div>
       </div>
 
-    <div id="noah-aviation-table1"class="card mb-3">
+    <section id="noah-aviation-table1" style="position: relative; top: -36px;"></section>
+    
+    <div class="card mb-3">
         <div class="card-header">
             <img style="width:18px;height:auto;" src="images/tables2.png"/> NOAH-Aviation Users
           </div>
@@ -1286,6 +1311,8 @@
       <li id="crcs-cads-table" class="breadcrumb-item active">CRCS-CADS</li>
     </ol>
 
+	<section id="crcs-cads-user" style="position: relative; top: -45px;"></section>
+
     <div class="mb-4">
         <div class="card text-white bg-success o-hidden h-100">
           <a class="card-footer text-white clearfix small z-1" href="#crcs-cads-table">
@@ -1299,7 +1326,7 @@
         </div>
       </div>
 
-      <div id="crcs-cads-user"class="card mb-4" style=" background-color:#e9ecef;">
+      <div class="card mb-4" style=" background-color:#e9ecef;">
         <div class="card-header"><img style="width:20px;height:auto;" src="images/profile2.png"/> Edit User</div>
         <div class="card-body">
         <form>
@@ -1372,7 +1399,9 @@
         </div>
               </div>
 
-    <div id="crcs-cads-table1"class="card mb-5">
+    <section id="crcs-cads-table1" style="position: relative; top: -36px;"></section>
+    
+    <div class="card mb-5">
         <div class="card-header">
           <i class="fas fa-table"></i>
           CRCS-CADS Users</div>
@@ -1902,7 +1931,7 @@
   <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+  <a class="scroll-to-top rounded" href="#">
     <img style="" src="images/arrow-up.png">
   </a>
 
@@ -1926,7 +1955,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
+  <script src="js/sb-admin.js"></script>
   
   <!-- Page level plugin JavaScript-->
   <script src="vendor/datatables/jquery.dataTables.js"></script>
