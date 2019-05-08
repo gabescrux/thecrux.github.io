@@ -28,7 +28,6 @@
     }
   });
   
-  
   // Smooth scrolling using jQuery easing
   $(document).on('click', 'a.scroll-to-top', function(event) {
     var $anchor = $(this);
@@ -38,44 +37,33 @@
     event.preventDefault();
   });
   
+
+  $(document).on('click', 'a[href^="#"]', function (event) {
+	    event.preventDefault();
+
+	    $('html, body').animate({
+	        scrollTop: $($.attr(this, 'href')).offset().top
+	    }, 500);
+	});
+
   
+  var menu = document.querySelector('.nav-bar');
+  var menuPosition = menu.getBoundingClientRect();
+  var placeholder = document.createElement('div');
+  placeholder.style.width = menuPosition.width + 'px';
+  placeholder.style.height = menuPosition.height + 'px';
+  var isAdded = false;
 
-//Select all links with hashes
-$('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#0"]')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function() {
-        // Callback after animation
-        // Must change focus!
-        var $target = $(target);
-        $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
-          return false;
-        } else {
-          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-          $target.focus(); // Set focus again
-        };
-      });
-    }
-  }
-});
-
-
-
+  window.addEventListener('scroll', function() {
+      if (window.pageYOffset >= menuPosition.top && !isAdded) {
+          menu.classList.add('sticky');
+          menu.parentNode.insertBefore(placeholder, menu);
+          isAdded = true;
+      } else if (window.pageYOffset < menuPosition.top && isAdded) {
+          menu.classList.remove('sticky');
+          menu.parentNode.removeChild(placeholder);
+          isAdded = false;
+      }
+  });
+  
 })(jQuery); // End of use strict
