@@ -1,0 +1,525 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+   pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "s" uri = "/struts-tags" %> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/bootstrapTable.min.css">
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <title>Log In</title>
+
+   </head>
+   <body>
+      <table width="98%">
+         <tr>
+            <td>&nbsp&nbsp</td>
+         </tr>
+         <tr>
+            <td width ="10%"/>
+            <td width="33%">
+               <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseThree">
+               NOAH Aviation
+               </button>
+            </td>
+            <td width="33%">
+               <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+               NOAH Maritime
+               </button>
+            </td>
+            <td width="33%">
+               <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+               CRCS-CADS
+               </button>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp&nbsp</td>
+         </tr>
+      </table>
+      <div id="accordion">
+         <div class="card">
+            <div class="card-header bg-primary mb-3">
+               <a class="collapsed card-link  text-white" data-toggle="collapse" aria-expanded="true" href="#collapseOne">
+               NOAH Aviation
+               </a>
+            </div>
+            <div id="collapseOne" class="collapse" data-parent="#accordion">
+               <div class="card-body text-body">
+                  <table id="tblAviation" class="table table-md table-hover">
+                     <thead class="thead-dark">
+                        <tr>
+                           <th scope="col">User ID</th>
+                           <th scope="col">First Name</th>
+                           <th scope="col">Last Name</th>
+                           <th scope="col">Email</th>
+                           <th scope="col">Phone</th>
+                           <th scope="col">Code</th>
+                           <th scope="col">Status</th>
+                           <th scope="col">Date Created</th>
+                           <th scope="col">Date Updated</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th scope="row">CON4442</th>
+                           <td>Mark</td>
+                           <td>Otto</td>
+                           <td>motto@psipax.com</td>
+                           <td>571-291-4646</td>
+                           <td>CACI</td>
+                           <td>Active</td>
+                           <td>2017-05-16</td>
+                           <td>2019-03-10</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">CON4442</th>
+                           <td>Jeff</td>
+                           <td>Horan</td>
+                           <td>jhorano@psipax.com</td>
+                           <td>571-291-4646</td>
+                           <td>NAVSUP</td>
+                           <td>Inactive</td>
+                           <td>2017-05-16</td>
+                           <td>2019-03-10</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">CON4442</th>
+                           <td>Gabe</td>
+                           <td>Ulrich</td>
+                           <td>gulrich@psipax.com</td>
+                           <td>571-291-4646</td>
+                           <td>NAVSUP</td>
+                           <td>Active</td>
+                           <td>2017-05-16</td>
+                           <td>2019-03-10</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <div id="frmAviation">
+                                          <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-4">
+                                 <label for="inputState">User</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>ZM9500</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User Information</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress">User ID:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="ZM9877">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">First Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">Last Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-12">
+                                 <label for="inputZip">DN:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Email:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Phone Number:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Code:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputState">Status</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">Roles</h5>
+                        <table width="98%">
+                           <tr>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">ITEM_MANAGER</li>
+                                    <li class="list-group-item">REVIEWER</li>
+                                 </ul>
+                              </td>
+                              <td width="33%" align="center">
+                                 <button  class="btn ">Add Role>></button>
+                                 </br></br>
+                                 <button  class="btn ">Remove Role<<</button>
+                              </td>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">RATES_MANAGER</li>
+                                    <li class="list-group-item">CONTROL_TABLE_MANAGER</li>
+                                    <li class="list-group-item">FILL_MANAGER</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <button  id="btnSaveAviation" class="btn btn-success">Save</button>
+                     <button  id="btnDeleteAviation" class="btn btn-danger">Delete</button>
+                     <button  id="btnCancelAviation" class="btn btn-primary">Cancel</button>
+                  </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-header bg-primary mb-3">
+            <a class="collapsed card-link  text-white" data-toggle="collapse" aria-expanded="true" href="#collapseTwo">
+            NOAH Maritime
+            </a>
+         </div>
+         <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body text-body">
+               <table id="tblMaritime" class="table table-md table-hover">
+                  <thead class="thead-dark">
+                     <tr>
+                        <th scope="col">User ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date Created</th>
+                        <th scope="col">Date Updated</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">CON4442</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>motto@psipax.com</td>
+                        <td>571-291-4646</td>
+                        <td>CACI</td>
+                        <td>Active</td>
+                        <td>2017-05-16</td>
+                        <td>2019-03-10</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">CON4442</th>
+                        <td>Jeff</td>
+                        <td>Horan</td>
+                        <td>jhorano@psipax.com</td>
+                        <td>571-291-4646</td>
+                        <td>NAVSUP</td>
+                        <td>Inactive</td>
+                        <td>2017-05-16</td>
+                        <td>2019-03-10</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">CON4442</th>
+                        <td>Gabe</td>
+                        <td>Ulrich</td>
+                        <td>gulrich@psipax.com</td>
+                        <td>571-291-4646</td>
+                        <td>NAVSUP</td>
+                        <td>Active</td>
+                        <td>2017-05-16</td>
+                        <td>2019-03-10</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div id="frmMaritime">
+                  <form>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-4">
+                                 <label for="inputState">User</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>ZM9500</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User Information</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress">User ID:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="ZM9877">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">First Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">Last Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-12">
+                                 <label for="inputZip">DN:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Email:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Phone Number:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Code:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputState">Status</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">Roles</h5>
+                        <table width="98%">
+                           <tr>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">ITEM_MANAGER</li>
+                                    <li class="list-group-item">REVIEWER</li>
+                                 </ul>
+                              </td>
+                              <td width="33%" align="center">
+                                 <button  class="btn ">Add Role>></button>
+                                 </br></br>
+                                 <button  class="btn ">Remove Role<<</button>
+                              </td>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">RATES_MANAGER</li>
+                                    <li class="list-group-item">CONTROL_TABLE_MANAGER</li>
+                                    <li class="list-group-item">FILL_MANAGER</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <button  id="btnSaveMari" class="btn btn-success">Save</button>
+                     <button  id="btnDeleteMari" class="btn btn-danger">Delete</button>
+                     <button  id="btnCancelMari" class="btn btn-primary">Cancel</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-header bg-primary mb-3">
+            <a class="collapsed card-link  text-white" data-toggle="collapse" href="#collapseThree">
+            CRCS-CADS
+            </a>
+         </div>
+         <div id="collapseThree" class="collapse show" data-parent="#accordion">
+            <div id="divCRCS" class="card-body text-body">
+               
+               <div id="container-fluid">
+  <div class="row">
+    <div class=" col-lg-2">
+      <input type="text" id="searchTable" class="search form-control" placeholder="Search results:">
+    </div>    <div class="col-lg-8 text-center ">
+    </div>
+    <div class="col-lg-1 float-right">
+      <button  id="btnAddUser" class="btn btn-success">Add User</button>
+    </div>
+  </div>
+</div>
+               <table id="tblCRCS" data-query-params="queryParams" data-pagination="true" >
+                  <thead class="thead-dark">
+                     <tr>
+                        <th data-field="Employee_ID" data-sortable="true">Employee ID</th>
+                        <th data-field="Employee_FirstName" data-sortable="true">First Name</th>
+                        <th data-field="Employee_LastName" data-sortable="true">Last Name</th>
+                        <th data-field="Employee_Email">Email</th>
+                        <th data-field="Emp_Phone_Number">Phone Number</th>
+                        <th data-field="Emp_Code" data-sortable="true">Code</th>
+                        <th data-field="Emp_Status" data-sortable="true">Status</th>
+                        <th data-field="Emp_Date_Created">Created</th>
+                        <th data-field="Emp_Date_Updated">Updated</th>
+                     </tr>
+                  </thead>
+               </table>
+               <div id="frmCRCS">
+                                       <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-4">
+                                 <label for="inputState">User</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>ZM9500</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">User Information</h5>
+                        <div class="card-body">
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress">User ID:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="ZM9877">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">First Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputAddress2">Last Name:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputAddress2">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-12">
+                                 <label for="inputZip">DN:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Email:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Phone Number:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                           </div>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                 <label for="inputZip">Code:</label>
+                                 <input type="text" class="form-control form-control-sm" id="inputZip">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label for="inputState">Status</label>
+                                 <select id="inputState" class="form-control form-control-sm">
+                                    <option selected>Choose...</option>
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card bg-light mb-3" >
+                        <h5 class="card-header text-white bg-secondary">Roles</h5>
+                        <table width="98%">
+                           <tr>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">ITEM_MANAGER</li>
+                                    <li class="list-group-item">REVIEWER</li>
+                                 </ul>
+                              </td>
+                              <td width="33%" align="center">
+                                 <button  class="btn ">Add Role>></button>
+                                 </br></br>
+                                 <button  class="btn ">Remove Role<<</button>
+                              </td>
+                              <td width="33%">
+                                 <ul class="list-group">
+                                    <li class="list-group-item">RATES_MANAGER</li>
+                                    <li class="list-group-item">CONTROL_TABLE_MANAGER</li>
+                                    <li class="list-group-item">FILL_MANAGER</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp&nbsp</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <button  id="btnSaveCRCS" class="btn btn-success">Save</button>
+                     <button  id="btnDeleteCRCS" class="btn btn-danger">Delete</button>
+                     <button  id="btnCancelCRCS" class="btn btn-primary">Cancel</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/6.0.0-ext-all.js"></script>
+      <script src="js/bootstrap.min.js" ></script>
+      <script src="js/bootstrapTable.min.js"></script>
+      <script src="js/general.js"></script>
+</html>
