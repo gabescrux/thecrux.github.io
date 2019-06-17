@@ -1,0 +1,1 @@
+var today = new Date();var yyyy = today.getFullYear();document.getElementById("date").innerHTML = yyyy;
