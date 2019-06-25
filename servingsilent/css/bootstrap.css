@@ -368,6 +368,10 @@ summary {
   cursor: pointer;
 }
 
+.c-p{
+  cursor:pointer
+}
+
 template {
   display: none;
 }
@@ -2485,8 +2489,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #e32626;
-  /* background-color: #d8f1f5; */
-  background-color: transparent;
+  background-color:#fff;
   border:solid #e32626 2px;
 }
 
@@ -2870,6 +2873,28 @@ input[type="button"].btn-block {
 
 .btn-padding{
   padding:10px 20px 10px 20px;
+}
+
+.mb-dropdwon{
+  margin-bottom: 1.5rem !important
+}
+
+@media screen and (max-width:1200px){
+  .btn-padding{
+    padding:7px 13px 3px 13px;
+  }
+  .mb-dropdwon{
+    margin-bottom: 1.0rem !important
+  }
+}
+
+@media screen and (max-width:992px){
+  .btn-padding{
+    padding:2px 4px 2px 4px;
+  }
+  .mb-dropdwon{
+    margin-bottom: 0.3rem !important
+  }
 }
 
 .fade {
@@ -4131,20 +4156,29 @@ input[type="button"].btn-block {
 }
 
 .card-body {
-  /* -ms-flex: 1 1 auto;
-  flex: 1 1 auto; */
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding:1.25rem
+}
+
+.card-body-menu{
+  margin-bottom:11px;
+	position:absolute;
+  bottom:0;
+  width:320px;
+	background-color:rgba(0,0,0,0.3);
 }
 
 .card-body-bg{
 	position:absolute;
-	bottom:0;
+  bottom:0;
+  width:100%;
 	background-color:rgba(0,0,0,0.3);
-	width:100%;
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+  font-weight:600;
+  padding:10px;
   color:#fff;
 }
 
@@ -7281,6 +7315,13 @@ button.bg-dark:focus {
 
 .fixed-top {
   position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.top {
   top: 0;
   right: 0;
   left: 0;

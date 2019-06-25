@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Serving Silent | </title>
+  		<link rel="stylesheet" href="../css/bootstrap.css">
+  		<link rel="stylesheet" href="../css/header.css">
+	  <!-- <link rel="stylesheet" href="../css/pins.css"> -->
+	  <link rel="stylesheet" href="../css/img-grid.css">
+</head>
+
+<body>
+		
+<div class="container rounded-sm shadow vw-100 p-3" style=" background-color: #fff">
+<div class="row"> 
+		<div class="column r1">
+		  <img class="rand1" src="../images/phonechat2.jpg" style="width:100%">
+		  <img class="rand1" src="../images/hand-heart.gif" style="width:100%">
+		  <img class="rand1" src="../images/article2.jpg" style="width:100%">
+		  
+
+		  <div class="card rand1 m-1 shadow-sm"style="width:368px">
+				<div class="card-body">
+				<h4 class="">What Does It Mean To Serve God?</h4>
+				
+				<a href="#mandate" class="float-right btn btn-primary btn-padding ">Learn More ...</a>
+				</div>
+				</div>
+
+		  <img class="rand1" src="../images/why.JPG" style="width:100%">
+		  <img class="rand1" src="../images/testimony.jpg" style="width:100%">
+		  <img class="rand1" src="../images/why.JPG" style="width:100%">
+		</div>
+		<div class="column r2">
+				<img class="rand2" src="../images/phonechat2.jpg" style="width:100%">
+				<img class="rand2" src="../images/hand-heart.gif" style="width:100%">
+				<img class="rand2" src="../images/article2.jpg" style="width:100%">
+				<img class="rand2" src="../images/sun.png" style="width:100%">
+				<img class="rand2" src="../images/why.JPG" style="width:100%">
+				<img class="rand2" src="../images/testimony.jpg" style="width:100%">
+				<img class="rand2" src="../images/why.JPG" style="width:100%">
+			  </div>
+			  <div class="column r3">
+					<img class="rand3" src="../images/phonechat2.jpg" style="width:100%">
+					<img class="rand3" src="../images/hand-heart.gif" style="width:100%">
+					<img class="rand3" src="../images/article2.jpg" style="width:100%">
+					<img class="rand3" src="../images/sun.png" style="width:100%">
+					<img class="rand3" src="../images/why.JPG" style="width:100%">
+					<img class="rand3" src="../images/testimony.jpg" style="width:100%">
+					<img class="rand3" src="../images/why.JPG" style="width:100%">
+				  </div>
+				  
+	  </div>
+
+
+<div class="text-center m-5">
+<a href="#mandate" class="btn btn-primary btn-padding m-1">More ...</a>
+</div>
+
+</div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <!-- <script  src="../js/pins.js"></script>-->
+<!-- <script src="../js/general.js"></script>  -->
+
+<script>
+// 	$(window).on('load', function() { // makes sure the whole site is loaded 
+// 	$('#status').fadeOut(); // will first fade out the loading animation 
+// 	$('#preloader').delay(0).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+// 	$('body').delay(10).css({'overflow':'visible'});
+//   })
+
+$(".r1").html($(".r1 .rand1").sort(function(){
+    return Math.random()-0.5;
+}));
+$(".r2").html($(".r2 .rand2").sort(function(){
+    return Math.random()-0.5;
+}));
+$(".r3").html($(".r3 .rand3").sort(function(){
+    return Math.random()-0.5;
+}));
+</script>
+</body>
+
+</html>

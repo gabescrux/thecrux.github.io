@@ -1,0 +1,65 @@
+
+#Target{padding:8px;}
+
+.PinImg img,iframe {border-radius:6px 6px 0 0;}
+
+.SourcePins,
+.iframeContainer
+{
+	border-radius:6px;
+	background:#fff;
+	box-sizing: border-box;
+	padding:0;
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+	display:inline-block;
+}
+
+iframe {height:320px;}
+
+.Caption h4 {
+	font-size:.9em;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	color: #333;
+}
+.Caption {
+	border-top:1px solid #e4e4e4;
+	border-bottom:1px solid #e4e4e4;
+	padding: .5em;
+}
+.Caption p {
+	font-size:.8em;
+	margin-top:.3em;
+	color: #333;
+	display:inline-block;
+	line-height:1.5em;
+}
+.Poster {padding:.5em;}
+
+.Thumb-Img {
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	display:inline-block;
+	border-radius:50%;
+	width:2em;
+	height:2em;
+}
+.Thumb-Txt {
+	display:inline-block;
+	width:80%;
+}
+
+.Thumb-Txt p {
+	padding-left:.5em;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	color: #717171;
+	font-size:.65rem;
+	text-transform:uppercase;
+}
