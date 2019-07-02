@@ -2875,12 +2875,16 @@ input[type="button"].btn-block {
   padding:10px 20px 10px 20px;
 }
 
+.btn-padding-menu{
+  padding:10px 20px 10px 20px;
+}
+
 .mb-dropdwon{
   margin-bottom: 1.5rem !important
 }
 
 @media screen and (max-width:1200px){
-  .btn-padding{
+  .btn-padding-menu{
     padding:7px 13px 3px 13px;
   }
   .mb-dropdwon{
@@ -2889,7 +2893,7 @@ input[type="button"].btn-block {
 }
 
 @media screen and (max-width:992px){
-  .btn-padding{
+  .btn-padding-menu{
     padding:2px 4px 2px 4px;
   }
   .mb-dropdwon{
@@ -9588,4 +9592,12 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+#msgDiv{
+  background-color:red;
+  width:100%;
+  padding:5px;
+  text-align: center;
+  color:#fff;
+  font-weight:600;
 }
