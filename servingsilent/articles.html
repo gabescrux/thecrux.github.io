@@ -48,7 +48,7 @@
 	<div class="container">
 		<a class="dn-min-980 menu-btn" onclick="openNav()">&#9776;</a>
 		<div class="dn-980">
-			<a class="b-btm"href="#">Home</a> 
+			<a class="b-btm"href="index.html">Home</a> 
 			<a class="b-btm"href="articles.html">Articles</a>
 		</div>
 		<div class="topnav-right dn-980">
@@ -102,7 +102,7 @@
 								<i onclick="dropdownClose()" class="float-right mr-3 c-p font-weight-bold h2">&times;</i></h5>
 								  <hr class="accent-3 mt-0 mb-dropdwon d-inline-block mx-auto" style="width: 60px; height:1px;background-color:#fff;">
 						</div>
-							  <div class="" style="padding-left:360px;">
+							  <div class="" style="padding-left:360px;"><a href="index.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-home"></i> Home</a>
 									<a href="chat.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-comments"></i> Chat</a>
 									<a href="why.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-ad"></i>  Why</a>
 									<a href="contribute.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-keyboard"></i> Contribute</a>
@@ -122,6 +122,76 @@
 	<div onmouseover="dropdownClose()"> <!--beginning of onmouseover for dropdownclose-->
 
 <!--***********************************************************************************************************-->
+
+
+<div class="gallery js-flickity shadow-all r" data-flickity-options='{ "autoPlay": 1500, "wrapAround": true }'>
+				<div class="gallery-cell overflow-hidden r1">
+					<a href="#">
+						<div class="img-cover-car" style="background-image: url('images/work_1.jpg')"></div>
+						<div class="card-body card-body-bg">
+							<h5 class="card-title">Title of Article Here.</h5>
+						</div>
+					</a>
+				</div>
+
+				<div class="gallery-cell overflow-hidden r1">
+					<a href="#">
+						<div class="img-cover-car" style="background-image: url('images/work_2.jpg')"></div>
+						<div class="card-body card-body-bg">
+							<h5 class="card-title">Title of Article Here.</h5>
+						</div>
+					</a>
+				</div>
+
+						<div class="gallery-cell overflow-hidden r1">
+					 		<a href="#">
+								<div class="img-cover-car" style="background-image: url('images/pointing2bible.jpg')"></div>
+								<div class="card-body card-body-bg">
+									<h5 class="card-title">What Does It Mean To Serve God?</h5>
+								</div>
+							</a>
+						</div>
+
+						<div class="gallery-cell overflow-hidden r1">
+							<a href="#">
+								<div class="img-cover-car" style="background-image: url('images/work_3.jpg')"></div>
+								<div class="card-body card-body-bg">
+									<h5 class="card-title">Title of Article Here.</h5>
+								</div>
+							</a>
+						</div>
+				
+						<div class="gallery-cell overflow-hidden r1">
+							<a href="#">
+								<div class="img-cover-car" style="background-image: url('images/work_1.jpg')"></div>
+								<div class="card-body card-body-bg">
+									<h5 class="card-title">Title of Article Here.</h5>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="gallery-cell overflow-hidden r1">
+							<a href="#">
+								<div class="img-cover-car" style="background-image: url('images/work_2.jpg')"></div>
+								<div class="card-body card-body-bg">
+									<h5 class="card-title">Title of Article Here.</h5>
+								</div>
+							</a>
+						</div>
+
+						<div class="gallery-cell overflow-hidden r1">
+							<a href="#">
+								<div class="img-cover-car" style="background-image: url('images/work_3jpg')"></div>
+								<div class="card-body card-body-bg">
+									<h5 class="card-title">Title of Article Here.</h5>
+								</div>
+							</a>
+						</div>
+		</div>
+
+
+
 
 
 <div class="container rounded-sm shadow vw-100 p-3" style=" background-color: #fff">
@@ -192,7 +262,11 @@
 	 <script src="js/jquery.min.js"></script>  
 	 <script src="js/general.js"></script>
  <script src="js/year.js"></script>  
- <!-- <script  src="js/carousel.js"></script> -->
-	
+ <script  src="js/carousel.js"></script> 
+ <script>
+$(".r").html($(".r .r1").sort(function(){
+    return Math.random()-0.5;
+}));
+</script>
 </body>
 </html>
