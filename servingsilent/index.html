@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Serving Silent | Home</title>
+    <title>Serving Silent | </title>
     <!-- Links -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/header.css">
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/btn.css">
 	<link rel="copyright" href="copyright.html">
 	<link rel="shortcut icon" type="image/x-icon" href="images/ss.ico"/>
-	<link rel="canonical" href="servingsilent.com"/>
+	<link rel="canonical" href="www.servingsilent.com"/>
 	<!-- general meta tags -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,22 +49,78 @@
 		<a class="dn-min-980 menu-btn" onclick="openNav()">&#9776;</a>
 		<div class="dn-980">
 			<a class="b-btm"href="#">Home</a> 
-			<a class="b-btm"href="chat.html">Chat</a>
+			<a class="b-btm"href="articles.html">Articles</a>
 		</div>
 		<div class="topnav-right dn-980">
 			<a class="b-btm"href="action.html">Action</a> 
-			<a class="b-btm"href="why.html">Why</a>
+			<a onclick="dropdown()" class="b-btm" style="text-decoration-color:white;">More &#x2B9F;</a>
 		</div>
 	</div>
 	</div>
-	<div id="mySidenav" class="sidenav">
-		<span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
-		<a class="b-left" href="#">Home</a> 
-		<a class="b-left" href="chat.html">Chat</a> 
-		<a class="b-left" href="action.html">Action</a> 
-		<a class="b-left" href="why.html">Why</a>
-	</div>
 
+	<div id="mySidenav" class="sidenav h2">
+		<span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+		<a class="b-left" href="index.html">Home</a> 
+		<a class="b-left"href="articles.html">Articles</a>
+		<a class="b-left" href="action.html">Action</a> 
+
+		<a class="b-left" href="chat.html">Chat</a> 
+		<a class="b-left" href="why.html">Why</a>
+		<a class="b-left" href="contribute.html">Contribute</a>
+		<a class="b-left" href="charity.html">Charity</a>
+		<a class="b-left" href="contact.html">Contact</a>
+		<a class="b-left" href="help.html">Help</a>
+		<a class="b-left" href="churches.html">Churches</a>
+		<a class="b-left" href="infinite/pictures.html">Pictures</a>
+		<a class="b-left" href="education.html">Education</a>
+		<a class="b-left" href="Ads.html">Ads</a>
+	</div>
+	 
+<div class="container">
+ 
+	<div id="dropdown" class="dropdown-content">
+		
+			
+					<div id="tips" style="width:320px;height:200px;overflow:hidden">
+							<a href="articles/What-does-it-mean-to-serve-God.html">
+								<div class="img-cover-car" style="background-image: url('images/pointing2bible.jpg')"></div>
+								<div class="card-body-menu">
+										<h4 style="width:320px;"class="card-title">What Does It Mean To Serve God?</h4>
+								</div>
+							</a>
+							<a href="#">
+									<div class="img-cover-car" style="background-image: url('images/pointing2bible.jpg')"></div>
+									<div class="card-body-menu">
+											<h4 style="width:320px;"class="card-title">What bumpy Does It Mean To Serve God?</h4>
+									</div>
+							</a>
+					</div>
+			
+				
+					<div class="p-1 top position-absolute mt-1" style="padding-left:360px;">
+						<div style="padding-left:360px;">
+							<h5 class="text-uppercase font-weight-bold pt-2">Discover More </i> 
+								<i onclick="dropdownClose()" class="float-right mr-3 c-p font-weight-bold h2">&times;</i></h5>
+								  <hr class="accent-3 mt-0 mb-dropdwon d-inline-block mx-auto" style="width: 60px; height:1px;background-color:#fff;">
+						</div>
+							  <div class="" style="padding-left:360px;">
+									<a href="chat.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-comments"></i> Chat</a>
+									<a href="why.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-ad"></i>  Why</a>
+									<a href="contribute.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-keyboard"></i> Contribute</a>
+									<a href="charity" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-hand-holding-heart"></i> Charity</a>
+									<a href="contact.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-address-book"></i> Contact</a>
+									<a href="help.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-question-circle"></i> Help</a>
+									<a href="churches.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-users"></i> Churches</a>
+									<a href="infinite/pictures.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-images"></i> Pictures</a>
+									<a href="education.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-book-open"></i> Education</a>
+									<a href="ads.html" class="btn btn-primary btn-padding-menu m-1"><i class="fas fa-ad"></i>  Ads</a>
+							</diV>
+					</div>
+	</div>
+</div>
+
+
+	<div onmouseover="dropdownClose()"> <!--beginning of onmouseover for dropdownclose-->
 	<!--Beginning of body -->
   	<div id="background-wrap"> 
 			<div class="x5"> 
@@ -222,24 +278,8 @@
 			</div>
 
 		</div>
-			
-	
-	<div style="background-color: #e32626;padding:90px 0px 90px 0px;width:100%">
-			<i class="fas fa-quote-left text-white ml-5 font-large-pa"></i>
-		<div class="container mt-5 mb-5">
-		<div id="tips" class="rand-card-cloud text-white">
-			<p>"For I am not ashamed of the gospel"<br/><i class="float-right bb-w" >- Romans 1:16</i></p>
-			<p>"Go therefore and make disciples of all nations"<br/><i class="float-right bb-w">- Matthew 28:19</i></p>
-			<p>"People will know that you are my disciples, if you have love for one another"<br/><i class="float-right bb-w">- John 13:35</i></p>
-			<p>"But be doers of the word, and not hearers only, deceiving yourselves"<br/><i class="float-right bb-w">- James 1:22</i></p>
-	</div>
-	</div>
-
-	</div>
-</div>
-</div>
-
-	<div class="o-x o-y">
+	</div>			
+		<div class="o-x o-y">
 			<div class="x2"> 
 					<div class="cloud">
 					</div>
@@ -251,8 +291,8 @@
 				</div>
 	</div>
 
-	<div class="container">
 
+	<div class="container">
 			<div class="row">	
 				<div class="col-md-4"><img alt="Red thought bubble with cross picture" class="img-centered shake-hover" src="images/redbubble.png"/></div>
 				<div class="col-md-4"></div>
@@ -266,7 +306,6 @@
 						<a title="Go To Why Page" href="why.html" class="float-right btn btn-primary rounded-pill btn-padding">Read More &raquo;</a>
 				</div>
 			</div>
-
 		</div>
 
 		<div class="o-x">
@@ -277,6 +316,24 @@
 		</div>
 
 		<div class="shadow-all">
+	<div style="background-color: #e32626;padding:90px 0px 90px 0px;width:100%">
+			<i class="fas fa-quote-left text-white ml-5 font-large-pa"></i>
+		<div class="container mt-5 mb-5">
+		<div id="tips" class="rand-card-cloud text-white">
+			<p>"For I am not ashamed of the gospel"<br/><i class="float-right bb-w" >- Romans 1:16</i></p>
+			<p>"Go therefore and make disciples of all nations"<br/><i class="float-right bb-w">- Matthew 28:19</i></p>
+			<p>"People will know that you are my disciples, if you have love for one another"<br/><i class="float-right bb-w">- John 13:35</i></p>
+			<p>"But be doers of the word, and not hearers only, deceiving yourselves"<br/><i class="float-right bb-w">- James 1:22</i></p>
+	</div>
+	</div>
+
+	</div>
+
+
+
+	
+
+		
 			<div style="background-color: #d9d9d9;padding:90px 0px 90px 0px;width:100%">
 			<div class="container">
 
@@ -320,6 +377,7 @@
 						<div class="col-md-5"><img alt="Brown and green dirt plant picture" class="img-centered shake-hover" src="images/potplant3.png"/></div>
 				</div>
 			</div>
+</div>
 </div>
 </div>
 
@@ -371,15 +429,13 @@
   	
 		</div>
 		
-  	<!-- 	</div> -->
-  	
-	  <br/>
-	  	<div class="m-5">
-			<a href="#" class="btn btn-primary btn-padding float-right">&#11165;</a>
-		</div>
-		<br/>
 
 <!-- Footer -->
+<br/>
+<div class="m-5">
+  <a href="#" class="btn btn-primary btn-padding float-right"><i class="fas fa-angle-double-up"></i></a>
+</div>
+<br/>
 <footer class="page-footer font-small blue-grey lighten-5 shadow-lg ">
     <div class="container text-center text-md-left mt-5">
 		<br/>
@@ -397,14 +453,14 @@
 		  <hr class="accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color:#e32625;">
 		  	<div class="row">
 				  <div class="col-md-4">
-					<p><i class="fas fa-keyboard"></i> <a href="#!">Contribute</a></p>
-					<p><i class="fas fa-hand-holding-heart"></i> <a href="#!">Charity</a></p>
-					<p><i class="fas fa-ad"></i> <a href="#!">Ads</a></p>
+					<p><i class="fas fa-keyboard"></i> <a href="contribute">Contribute</a></p>
+					<p><i class="fas fa-hand-holding-heart"></i> <a href="charity.html">Charity</a></p>
+					<p><i class="fas fa-ad"></i> <a href="ads.html">Ads</a></p>
 				  </div>
 				  <div class="col-md-5">
-						<p><i class="fas fa-comment"></i> <a href="#!">Help</a></p>
-						<p><i class="fas fa-envelope"></i> <a href="#!">Contact</a></p>
-						<p><i class="fas fa-home"></i> <a href="#!">Churches Near you</a></p>
+						<p><i class="fas fa-comment"></i> <a href="help.html">Help</a></p>
+						<p><i class="fas fa-envelope"></i> <a href="contact.html">Contact</a></p>
+						<p><i class="fas fa-home"></i> <a href="churches.html">Churches</a></p>
 					</div>
 			</diV>
         </div>
@@ -413,21 +469,19 @@
 			<a href="#!" class="display:inline-block;"><i class="fab fa-github-square"></i></a></p>
 		  </div>
 		</div>
-			
-				
     </div>
 	</footer>
-	
-	<div class="footer-copyright text-center text-black-50 py-3 m-5">© 2018-<span id="date"></span> Copyright:
-		<a style="color:#e32625;" href="https://www.servingsilent.com"> ServingSilent.com</a>
-		<div class="container"><br/><p class="m-0 text-center">
-			Excerpts and photos may be freely used if attribution is given to the author/photographer and to this website.</p>
+		<div class="footer-copyright text-center text-black-50 py-3 m-5">© 2018-<span id="date"></span> Copyright:
+			<a style="color:#e32625;" href="copyright.html"> ServingSilent.com</a>
+			<div class="container"><br/><p class="m-0 text-center">
+				Excerpts and photos may be freely used if attribution is given to the author/photographer and to this website.</p>
+			</div>
 		</div>
-	</div>
-  	
-	 <script src="js/jquery.js"></script>  
- <script src="js/general.js"></script>  
- <script  src="js/carousel.js"></script>
+	</div> <!--/end of onmouseover dropdown close-->
+	 <script src="js/jquery.min.js"></script>  
+	 <script src="js/general.js"></script>
+ <script src="js/year.js"></script>  
+  <script  src="js/carousel.js"></script>
 
 </body>
 </html>
