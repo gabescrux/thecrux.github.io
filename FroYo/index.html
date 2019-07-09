@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frozen Yogurt | Home</title>
+  
+  
+  <div id="includedContent2"></div>
+      
+  <style>
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: #000;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+footer{
+  background-color:#6b3e26
+}
+  </style>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>  
+  <script> 
+      $(function(){
+        $("#includedContent2").load("csslinks.html"); 
+        $("#includedContent").load("header.html"); 
+        $("#includedContent1").load("footer.html"); 
+      });
+      </script> 
+</head>
+
+<body>
+    <div id="msgDiv"><h2 id="result">detecting…</h2></div>
+    <!-- <div html="header.html"></div> -->
+  
+  <div style="background-color:lightskyblue;">
+      <div class="type-js headline">
+          <h1 class="text-js"onload="autoType()">Frozen Yogurt. Recipes. Articles. Combinations</h1>
+          
+        </div>
+</div>
+<div id="includedContent1"></div>
+<div id="includedContent"></div>
+
+<!-- <div html="footer.html"></div>   -->
+<script src="js/general.js"></script>
+
+<script>
+    includeHTML();
+</script>
+</body>
+
+</html>
