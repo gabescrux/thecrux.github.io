@@ -1,9 +1,11 @@
 function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
-};
-function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
-};
+	var x = document.getElementById("mySidenav");
+	if (x.style.width === "0px") {
+	  x.style.width = "250px";
+	} else {
+	  x.style.width = "0px";
+	}
+  }
 
 //function navmenu() {
 //	  var x = document.getElementById("mySidenav");
