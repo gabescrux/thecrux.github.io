@@ -1573,8 +1573,16 @@ input, select, textarea {
 		border-bottom: solid 1px #ccc;
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
-	m-w400{
+	.m-w400{
 		max-width:400px
+	}
+
+	.m-h500{
+		max-height:500px
+	}
+
+	.o-y-h{
+		overflow-y:hidenn
 	}
 
 		.box .image.featured {
