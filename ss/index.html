@@ -10,18 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
 		$(document).ready(function(){
-            $("#articleSearch").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#articleList li").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-			});
 			  $("#web-header").load("common/header.html");
               $("#web-footer").load("common/footer.html");
               $("#web-rightSideBar").load("common/rightSideBar.html");
-
               
+			});
       </script>
       
 </head>
@@ -101,16 +94,15 @@
        <div id="web-footer"></div>
 
     </div>
-    <!-- <script>
-            $(document).ready(function(){
-                $("#web-rightSideBar").load("common/rightSideBar.html");
+    <script>
+            function search(){
               $("#articleSearch").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $("#articleList li").filter(function() {
                   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
               });
-            });
-            </script> -->
+            };
+            </script>
 </body>
 </html>
