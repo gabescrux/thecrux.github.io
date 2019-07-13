@@ -93,14 +93,14 @@
 			});
       </script>
       <script>
-            // $(document).ready(function(){
-            //   $("#articleSearch").on("keyup", function() {
-            //     var value = $(this).val().toLowerCase();
-            //     $("#articleList li").filter(function() {
-            //       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            //     });
-            //   });
-            // });
+            $(document).ready(function(){
+              $("#articleSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#articleList li").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
             </script>
 </body>
 </html>
