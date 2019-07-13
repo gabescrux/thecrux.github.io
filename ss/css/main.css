@@ -1573,6 +1573,9 @@ input, select, textarea {
 		border-bottom: solid 1px #ccc;
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
+	m-w400{
+		max-width:400px
+	}
 
 		.box .image.featured {
 			position: relative;
