@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/ss.ico"/>
 	
-
+    <!-- <script src="js\jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+	
+			  $("#web-header").load("common/header.html");
+              $("#web-footer").load("common/footer.html");
+              $("#web-rightSideBar").load("common/rightSideBar.html");
+		
+      </script>
+      
 </head>
 <body>
 
@@ -84,16 +93,9 @@
        <div id="web-footer"></div>
 
     </div>
-    <script src="js\jquery.min.js"></script>
     <script>
-		$(document).ready(function(){
-			  $("#web-header").load("common/header.html");
-              $("#web-footer").load("common/footer.html");
-              $("#web-rightSideBar").load("common/rightSideBar.html");
-			});
-      </script>
-      <script>
             $(document).ready(function(){
+                $("#web-rightSideBar").load("common/rightSideBar.html");
               $("#articleSearch").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $("#articleList li").filter(function() {
