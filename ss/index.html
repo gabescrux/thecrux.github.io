@@ -12,7 +12,7 @@
 		$(document).ready(function(){
                 $("#web-header").load("common/header.html");
                 $("#web-footer").load("common/footer.html");
-                $("#web-rightSideBar").load("common/rightSideBar.html");
+                $("#web-rightSideBar").load("common/search.html");
               $("#articleSearch").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $("#articleList li").filter(function() {
@@ -96,23 +96,26 @@
                                 <section class="box m-w400">
                                     
                                 </section>                  
-                                <section class="box m-w400">
-                                    <header>
+                                <section class="boxSearch m-w400 m-h500 o-h">
+                                
+                                    <div style="background-color:lightgray;padding:20px"> 
                                         <h4>Search Articles...</h4>
-                                        <input id="articleSearch" type="text" placeholder="Search..">
-                        <br>
-                        
-                        <ul id="articleList">
-                                <div id="web-rightSideBar"></div>
-                        </ul>
-                                    </header>
+                                        <input style="width:100%" id="articleSearch" type="text" placeholder="Search..">
+                                   </div>
+                                   
+                                    <ul id="articleList" style="margin:20px">
+                                        <div id="web-rightSideBar"></div>
+                                    </ul>
+                                   
+                                    
+                                   
                                 </section>
                         </div> 
                         
                     </div>
                 </div>
             </section>
-
+        <!-- footer -->
        <div id="web-footer"></div>
 
     </div>
