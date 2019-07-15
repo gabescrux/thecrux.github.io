@@ -7,26 +7,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/ss.ico"/>
 	
     <!-- <script src="js\jquery.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-		$(document).ready(function(){
-                $("#web-header").load("common/header.html");
-                $("#web-footer").load("common/footer.html");
-                $("#web-rightSideBar").load("common/search.html");
-              $("#articleSearch").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#articleList li").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-			});
-      </script>
-      <script>
-      window.onscroll = () => {
-  const nav = document.querySelector('#side-menu');
-  if(this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
-};
-      </script>
+    
+     
 </head>
 <body>
 
@@ -43,7 +25,7 @@
 
                             <!-- Content -->
                                 <article class="boxArticle post">
-                                    <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                                    <a href="#" class="image featured"><img src="images/pointing2bible.jpg" alt="" /></a>
                                     <header>
                                         <h2>Right sidebar</h2>
                                         <p>Lorem ipsum dolor sit amet feugiat</p>
@@ -97,11 +79,11 @@
                         </div>
                          <!-- Sidebar -->
                          <div class="col-4 col-12-medium">               
-                                <section class="boxSearch m-w400 m-h500 o-h">
+                                <section class="boxSearch m-w400 o-h">
                                 
                                     <header style="padding:20px"> 
-                                        <h4>Search Articles...</h4>
-                                        <input style="width:100%" id="articleSearch" type="text" placeholder="Search..">
+                                        <h4>Search For Articles:</h4>
+                                        <input style="width:100%" id="articleSearch" type="text" placeholder="Auto Search...">
                                     </header>
                                    
                                     <ul id="articleList" style="margin:20px">
@@ -122,6 +104,19 @@
        <div id="web-footer"></div>
 
     </div>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+                $("#web-header").load("common/header.html");
+                $("#web-footer").load("common/footer.html");
+                $("#web-rightSideBar").load("common/search.html");
+              $("#articleSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#articleList li").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+			});
+      </script>
 </body>
 </html>
