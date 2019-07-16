@@ -2826,18 +2826,6 @@ input, select, textarea {
 		text-align: center !important;
 	  }
 
-	  @media (min-width: 768px) {
-		.text-md-left {
-		  text-align: left !important;
-		}
-		.text-md-right {
-		  text-align: right !important;
-		}
-		.text-md-center {
-		  text-align: center !important;
-		}
-	  }
-
 	  
 .m-0 {
 	margin: 0 !important;
