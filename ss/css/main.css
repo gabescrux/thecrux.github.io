@@ -110,12 +110,12 @@ input, select, textarea {
 		text-shadow: 1px 1px 8px #fff;
 	}
 
-	.bg-r{
-		background-color:#e32625
+	.bg-b{
+		background-color:#26619c
 	}
 
-	.c-r{
-		color:#e32625
+	.c-b{
+		color:#26619c
 	}
 
 	i, em {
@@ -2107,7 +2107,7 @@ input, select, textarea {
 
 .nav-title{
 	border-bottom: 0px solid #fff;
-	background-color:#e32625;
+	background-color:#26619c;
 	color:#fff;
 }
 
@@ -2245,7 +2245,7 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		color: #858484;
-		padding: 4em 0;
+		padding: 1em 0;
 	}
 
 		#footer:before {
@@ -2881,7 +2881,7 @@ input, select, textarea {
 	  }
 	  
 	  .shadow-lg {
-		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+		box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 	  }
 
 	  .text-left {
