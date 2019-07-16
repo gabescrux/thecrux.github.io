@@ -52,7 +52,7 @@
   #header img{
     height:35px;width:auto;border-radius:5px;margin-bottom:-8px;margin-left:10px
   }
-  @media screen and(max-width:600px){
+  @media only screen and(max-width:600px){
 	.hide600{
 		display:none
 	}
