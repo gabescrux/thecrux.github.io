@@ -1584,11 +1584,7 @@ input, select, textarea {
 	max-height:500px;
 	max-width:400px
 }
-@media screen and (max-width:980px){
-	.boxSide {
-		max-width:100%
-	}
-}
+
 
 
 .o-h{
@@ -2355,6 +2351,9 @@ input, select, textarea {
 			}
 
 		/* Box */
+		.boxSide {
+			max-width:100%
+		}
 
 			.box footer ul.actions li {
 				margin: 1em 0 0 0;
@@ -2591,6 +2590,11 @@ input, select, textarea {
 /* Small */
 
 	@media screen and (max-width: 736px) {
+
+ /*header*/
+ .hide736{
+	display:none
+}
 
 		/* Basic */
 
