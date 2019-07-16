@@ -2596,10 +2596,6 @@ input, select, textarea {
 	display:none
 }
 
-.nav-title{
-	font-size: 1.75em;
-}
-
 		/* Basic */
 
 			h2, h3, h4, h5, h6 {
@@ -2738,11 +2734,10 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					color: #252122;
-					font-weight: 900;
 					letter-spacing: -0.035em;
+					font-size: .9em
 				}
-
+				
 		/* Intro */
 
 			#intro {
