@@ -2729,15 +2729,14 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
-				text-align: center;
-			}
-
 				#header h1 {
 					letter-spacing: -0.035em;
-					font-size: .8em
+					font-size: .7em
 				}
 				
+				#header img{
+					height:35px;margin-bottom:-7px;margin-left:6px
+				}
 		/* Intro */
 
 			#intro {
