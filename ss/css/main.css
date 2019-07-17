@@ -2731,11 +2731,11 @@ input, select, textarea {
 
 				#header h1 {
 					letter-spacing: -0.035em;
-					font-size: .7em
+					font-size: .75em
 				}
 				
 				#header img{
-					margin-left:6px
+					height:30px;margin-left:6px
 				}
 				#header .nav-title-li{
 					margin-bottom:-4px
