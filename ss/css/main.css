@@ -2728,17 +2728,18 @@ input, select, textarea {
 				}
 
 		/* Header */
-
+			#side-menu{	
+			}
 				#header h1 {
 					letter-spacing: -0.035em;
-					font-size: .75em
+					font-size: .9em
 				}
 				
 				#header img{
 					height:30px;margin-left:6px
 				}
 				#header .nav-title-li{
-					margin-bottom:-5px
+					margin-left:-10px
 				  }
 		/* Intro */
 
