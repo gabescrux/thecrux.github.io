@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="css/header.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/ss.ico"/>
 	
-    <!-- <script src="js\jquery.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+		$(document).ready(function(){
+                $("#web-header").load("common/header.html");
+                $("#web-footer").load("common/footer.html");
+                $("#web-rightSideBar").load("common/search.html");
+              $("#articleSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#articleList li").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+			});
+      </script>
     
      
 </head>
@@ -105,19 +119,6 @@
        <div id="web-footer"></div>
 
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script>
-		$(document).ready(function(){
-                $("#web-header").load("common/header.html");
-                $("#web-footer").load("common/footer.html");
-                $("#web-rightSideBar").load("common/search.html");
-              $("#articleSearch").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#articleList li").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-			});
-      </script>
+    
 </body>
 </html>
