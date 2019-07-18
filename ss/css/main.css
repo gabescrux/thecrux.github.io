@@ -2722,26 +2722,24 @@ input, select, textarea {
 				}
 
 		/* Header */
-			#side-menu{	
-			}
 				#header h1 {
 					letter-spacing: -0.04em;
 					font-size: .9em
 				}
 				
 				#header img{
-					height:30px;margin-left:6px
+					height:30px;
+					margin-left:6px
 				}
-				#header .nav-title-li{
-					margin-left:-10px
+				#header .nav-title{
+					margin-left:-8px
 				  }
 
-				  .dropdown{
-					margin-top:-30px;
-				  }
-
-				  #header > div > a{
+				  #header > .hide736{
 					display:none
+				  }
+				 #side-menu{
+					margin-top:1px
 				  }
 		/* Intro */
 
