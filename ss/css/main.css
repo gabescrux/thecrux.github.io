@@ -2590,11 +2590,6 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
 
- /*header*/
- .hide736{
-	display:none
-}
-
 		/* Basic */
 
 			h2, h3, h4, h5, h6 {
@@ -2739,6 +2734,14 @@ input, select, textarea {
 				}
 				#header .nav-title-li{
 					margin-left:-10px
+				  }
+
+				  .dropdown{
+					margin-top:-30px;
+				  }
+
+				  #header > div > a{
+					display:none
 				  }
 		/* Intro */
 
