@@ -1,5 +1,6 @@
 
 #side-menu{
+    cursor:pointer;
     padding: 21px 25px; 
     color:#000;
     float:right
@@ -17,12 +18,12 @@
 	box-shadow: 0px 5px 10px lightgray;
   }
   
-  #header > div > div > a{
+  #header > div > a{
     float: right;
     cursor: pointer
   }
   
-  #header > div > div > a {
+  #header > div > a {
     color:#000;
     display:block;
 	display: block;
@@ -31,7 +32,7 @@
 	text-decoration: none;
   }
 
-  #header > div > div > a:hover {
+  #header > div > a:hover {
     background-color:#dedede
   }
 
@@ -66,7 +67,8 @@
     left: 0;
     background-color: #fff;
     position: relative;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-top:1px lightgray solid
   }
   
   .dropdown a {
@@ -74,7 +76,7 @@
     padding: 10px 14px;
     text-decoration: none;
     display: block;
-    text-align:center;
+    text-align:center
   }
   
   .dropdown a:hover {background-color: #f1f1f1}

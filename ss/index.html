@@ -4,36 +4,25 @@
     <title>Serving Silent | Blog</title>
     <!-- Links -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/ss.ico"/>
-	
-    <!-- <script src="js\jquery.min.js"></script> -->
-    
-      <style>
-      #tips div{
-          display:none
-      }
-      </style>
 </head>
 <body>
 
     <div id="page-wrapper">
-
         <!-- Header -->
-       <div id="web-header"></div>
+        <div id="web-headermenu"></div>
+        
 
         <!-- Main -->
             <section id="main">
                 <div class="container">
-                <div id="tips">
-                    <div><img class="w-100" style="height:600px" src="images/bible-finger-pointing-to-verse.jpg" alt=""/></div>
-                    <div><img class="w-100" style="height:300px" src="images/bible-finger-pointing-to-verse.jpg" alt=""/></div>
-                </div>
-
                     <div class="row">
-                        
+                        <div class="col-8 col-12-medium">
 
                             <!-- Content -->
-                                <article class="box post">
+                                <article class="boxArticle post">
+                                    <a href="#" class="image featured"><img src="images/pointing2bible.jpg" alt="" /></a>
                                     <header>
                                         <h2>Right sidebar</h2>
                                         <p>Lorem ipsum dolor sit amet feugiat</p>
@@ -84,20 +73,39 @@
                                     </section>
                                 </article>
 
+                        </div>
+                         <!-- Sidebar -->
+                         <div class="col-4 col-12-medium">               
+                                <section class="boxSide o-h">
                                 
-                        
+                                    <header style="padding:20px"> 
+                                        <h4>Search For Articles:</h4>
+                                        <input style="width:100%" id="articleSearch" type="text" placeholder="Auto Search...">
+                                    </header>
+                                   
+                                    <ul id="articleList" style="margin:20px">
+                                        <div id="web-rightSideBar"></div>
+                                    </ul>
+                                </section>
+                                <section class="boxSide">
+                                        <header style="padding:20px"> 
+                                                <h4>More...</h4>
+                                        </header>
+                                </section>   
+                        </div> 
                         
                     </div>
                 </div>
             </section>
         <!-- footer -->
        <div id="web-footer"></div>
-
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
 		$(document).ready(function(){
-                $("#web-header").load("common/header.html");
+                $("#web-headermenu").load("common/headermenu.html");
+                $("#web-dropdown").load("common/dropdown.html");
                 $("#web-footer").load("common/footer.html");
                 $("#web-rightSideBar").load("common/search.html");
               $("#articleSearch").on("keyup", function() {
@@ -106,21 +114,7 @@
                   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
               });
-            });
-            
+			});
       </script>
-      <script type="text/javascript">
-
-        this.randomtip = function(){
-            var length = $("#tips div").length; // this is where we put the id of the list
-            var ran = Math.floor(Math.random()*length) + 1;
-            $("#tips div:nth-child(" + ran + ")").show();
-        };
-        
-        $(document).ready(function(){	
-            randomtip();
-        });
-        
-        </script>
 </body>
 </html>
