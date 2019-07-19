@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Randomly Displayed Content Using CSS and JavaScript</title>
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
 
 this.randomtip = function(){
@@ -76,14 +76,6 @@ pre{
 </style>
 </head>
 <body>
-
-	<h1>Randomly Displayed Content Using CSS and JavaScript</h1>
-	
-	<script type="text/javascript" src="http://cssglobe.com/ads/blogsponsor.js"></script>
-	
-	<p>This script takes an unordered list and randomly displays one item on <strong>each page load</strong> (reload to test).</p>
-	
-	<h2>Did you know that...</h2>
 	
 	<ul id="tips">
 		<li>... if you want to become a better coder you need to eat your vegetables?</li>
@@ -92,22 +84,6 @@ pre{
 		<li>... jQuery is your friend? For real!</li>
 		<li>... no matter what some people claim, you can't learn CSS in 3 hours?</li>
 	</ul>
-	
-<h2>The Script</h2>
-
-<pre>this.randomtip = function(){
-	var length = $("#tips li").length;
-	var ran = Math.floor(Math.random()*length) + 1;
-	$("#tips li:nth-child(" + ran + ")").show();
-};
-
-$(document).ready(function(){	
-	randomtip();
-});</pre>	
-	
-<p><a href="http://cssglobe.com/post/6023/simple-way-to-random-display-or-rotate-content-using">Go back to the article</a></p>
-	
-<p>This script is supported by <a href="http://templatica.com">Css Templates</a> by Templatica</p>
 
 
 </body>
