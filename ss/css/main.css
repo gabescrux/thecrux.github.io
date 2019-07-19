@@ -2198,23 +2198,18 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		color: #858484;
-		padding: 1em 0;
 	}
-
-		#footer:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: url("images/bg01.png");
-			background-size: 100% 100%;
-			z-index: 0;
-			opacity: 0.5;
-		}
+#footer .gotop{
+	padding:20px;
+	text-align:center;
+	background-color:lightgray;
+	position:relative;
+	z-index:999;
+}
 
 		#footer a {
-			color: #c5c4c4;
+			color: #858484;
+			text-decoration:none
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
