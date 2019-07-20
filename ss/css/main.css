@@ -1950,10 +1950,18 @@ input, select, textarea {
 
 /* Footer */
 
+.b-bottom{
+border-bottom:solid 2px #26619c;
+width:40%
+}
+
+#footer .article-d-none{
+display:none
+}
 .article-con {
     position: relative;
 	color: #000;
-	border:1px #ccc solid
+	border:1px rgba(204, 204, 204, 0.214) solid
   }
   .article-con:hover {
 	
@@ -2104,7 +2112,7 @@ input, select, textarea {
 					.article-title {
 						padding:10px 35px
 					  }
-					
+					 
 
 		/* Copyright */
 
@@ -2122,7 +2130,7 @@ input, select, textarea {
 
 	@media screen and (max-width: 980px) {
 
-
+/*footer*/
 		#footer .social-icons{
 			display:inline
 				}
@@ -2130,6 +2138,9 @@ input, select, textarea {
 				.article-title {
 					padding:40px 20px
 				  }
+				  #footer .article-d-none{
+					display:block
+					}
 		/* Basic */
 
 			html, body {
@@ -2566,6 +2577,9 @@ input, select, textarea {
 			.article-title {
 				padding:20px 30px
 			  }
+			  #footer .article-d-none{
+				display:block
+				}
 
 	}
 
