@@ -1952,17 +1952,16 @@ input, select, textarea {
 
 .article-con {
     position: relative;
-    color: #000;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	color: #000;
+	border:1px #ccc solid
   }
   .article-con:hover {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.0) !important;
-	border:1px #ccc solid
+	
   }
   
   .article-title {
     position: relative;
-	padding:10px
+	padding:10px 55px
   }
 
 .d-none{
@@ -2102,6 +2101,10 @@ input, select, textarea {
 					#footer header h2 {
 						font-size: 1.25em;
 					}
+					.article-title {
+						padding:10px 35px
+					  }
+					
 
 		/* Copyright */
 
@@ -2123,6 +2126,10 @@ input, select, textarea {
 		#footer .social-icons{
 			display:inline
 				}
+
+				.article-title {
+					padding:40px 20px
+				  }
 		/* Basic */
 
 			html, body {
@@ -2555,6 +2562,10 @@ input, select, textarea {
 			#footer {
 				padding: 40px 0 20px 0;
 			}
+
+			.article-title {
+				padding:20px 30px
+			  }
 
 	}
 
