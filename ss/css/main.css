@@ -2580,6 +2580,9 @@ display:none
 			  #footer .article-d-none{
 				display:block
 				}
+				.m-n{
+					margin-bottom:-25px !important
+				}
 
 	}
 
