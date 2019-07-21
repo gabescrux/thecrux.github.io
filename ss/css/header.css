@@ -77,12 +77,12 @@
     text-decoration: none;
     display: block;
     font-weight:700;
+    font-size:20px;
+    letter-spacing:.05em;
     text-align:left
   }
   
   .dropdown a:hover {background-color: #f1f1f1}
  
   
-  .m-n{
-      margin-bottom:-25px
-  }
+  
