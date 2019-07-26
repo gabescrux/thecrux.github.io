@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serving Silent | Blog</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon/fishsmall.ico"/>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="web-header"></div>
+        <div class="article-search">
+                <section class="container">
+                    <header class="center-search">   
+                        <h3 class="text-center mr-5 pt-3">Search For Articles:</h3>
+                        <input id="articleSearchInput" type="text" placeholder="Auto Search..."><i style="margin-left:-50px" class="fas fa-search"></i>
+                    </header>
+                    <section class="d-none">
+                        <ul id="articleList" style="margin:20px">
+                            <div id="web-rightSideBar"></div>
+                        </ul>
+                    </section>
+                    </section>
+        </div>
+        <!-- Main -->
+            <section id="main">
+                <div class="container">
+                    <div class="row">
+                            <div class="row">
+                                    <article class="r">
+                                            <div class="article-con">
+                                                <a href="#">
+                                                   <div class="row">
+                                                            <img class="col-6 col-6-medium col-12-small o-cover" src="images/pointing2bible.jpg"/>
+                                                            <div class="article-title col-6 col-6-medium col-12-small">
+                                                                <h3>What does it mean to serve God??????????</h3>
+                                                                <p>
+                                                                sdf dsf jsdf sdf sdf sd sd sd sdf sdf sdf s
+                                                                xd dddddsdf dsf jsdf sdf sdf sd sd sd sdf sdf sdf s
+                                                                xd dddddsdf dsf jsdf sdf sdf sd sd sd sdf sdf sdf s
+                                                                xd ddddd sdf dsf jsdf sdf sdf sd sd sd sdf sdf sdf s
+                                                                xd ddddd sdf dsf jsdf sdf sdf sd sd sd sdf sdf sdf s
+                                                                xd
+                                                                </p>
+                                                                <div class="read-more"><button>Read More <i class="fas fa-angle-double-right"></i></button></div>
+                                                            </div>
+                                                   </div>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                            
+                            <div id="web-articlesIndex"></div>
+                            
+                    </div>
+                </div>
+            </section>
+        <!-- footer -->
+       <div id="web-footer"></div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    
+    <script>
+    var cards = $(".r");
+for(var i = 0; i < cards.length; i++){
+    var target = Math.floor(Math.random() * cards.length -1) + 1;
+    var target2 = Math.floor(Math.random() * cards.length -1) +1;
+    cards.eq(target).before(cards.eq(target2));
+}
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/articleIndexOnLoad.js"></script>
+</body>
+</html>
