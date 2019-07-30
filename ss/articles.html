@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/icon/fishsmall.ico"/>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     <div id="page-wrapper">
@@ -16,10 +17,12 @@
         <div class="article-search">
                 <section class="container">
                     <header class="center-search">   
-                        <h3 class="text-center mr-5 pt-3">Search For Articles:</h3>
+                        <h3 class="text-center pt-3">Search For Articles:</h3>
                         <input id="articleSearchInput" type="text" placeholder="Auto Search..."><i style="margin-left:-50px" class="fas fa-search"></i>
+                        <br/>
+                        <i style="padding:5px;border-radius:100px;background-color:lightgray;margin:0 auto;"class="fas fa-stream"></i>
                     </header>
-                    <section class="d-none">
+                    <section id="articles-li" class="d-none">
                         <ul id="articleList" style="margin:20px">
                             <div id="web-rightSideBar"></div>
                         </ul>
@@ -62,7 +65,7 @@
         <!-- footer -->
        <div id="web-footer"></div>
     </div>
-    <script src="js/jquery.min.js"></script>
+    
     
     <script>
     var cards = $(".r");

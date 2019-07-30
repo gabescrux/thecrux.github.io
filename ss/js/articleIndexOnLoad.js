@@ -9,11 +9,12 @@ $(document).ready(function(){
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
      });
+     $("#articleSearchInput").click(function() {
+      var x = document.getElementById("articles-li");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+     });
 });
-
-
-
-
-
-
-
