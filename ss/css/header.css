@@ -1,5 +1,5 @@
 #side-menu{
-    margin-top:1px
+    margin-top:1px;
     cursor:pointer;
     padding: 21px 25px; 
     color:#000;
@@ -66,9 +66,22 @@
     left: 0;
     background-color: #fff;
     position: absolute;
+    margin:61.3px 0px 0px 0px;
     width:100%;
+    z-index:9999;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-top:1px lightgray solid
+  }
+
+  .dropdown-content-arrow{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
   }
   
   .dropdown-content a {
