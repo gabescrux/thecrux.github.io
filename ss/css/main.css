@@ -1398,10 +1398,6 @@ input, select, textarea {
 			border-bottom:solid rgb(225, 225, 225) 1px;
 		}
 
-		.center-search{
-			margin:0 auto; width:320px
-		}
-
 /* Button */
 
 .lg-font{
@@ -1867,11 +1863,17 @@ input, select, textarea {
 	}
 
 	.article-search input{
+		width:85%;
 		margin:20px;
 		border-radius:50px;
 		border:none;
 		padding:0px 20px;
 		box-shadow:1px 1px 4px gray inset
+	}
+
+	.center-search{
+		margin:0 auto;
+		width:320px
 	}
 
 /* Header */
