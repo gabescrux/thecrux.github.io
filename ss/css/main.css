@@ -1863,18 +1863,20 @@ input, select, textarea {
 	}
 
 	.article-search input{
-		width:85%;
-		margin:20px;
+		width:100%;
 		border-radius:50px;
 		border:none;
 		padding:0px 20px;
 		box-shadow:1px 1px 4px gray inset
 	}
+	
+	.search-icon{
+		margin:0px 0px 0px -30px
+		}
 
-	.center-search{
-		margin:0 auto;
-		width:320px
-	}
+		header div{
+			border:solid black 1px
+		}
 
 /* Header */
 
@@ -2627,13 +2629,13 @@ display:none
 				 #side-menu{
 					margin-top:1px
 				  }
+
 				  .article-search input{
-					width:94%;
-					margin:20px;
-					border-radius:50px;
-					border:none;
-					padding:0px 20px;
-					box-shadow:1px 1px 4px gray inset
+					margin:20px 0px 20px 0px
+				}
+
+				.search-icon{
+					margin:27px 0px 0px -30px
 				}
 			
 				.center-search{
@@ -2690,15 +2692,15 @@ display:none
 				padding: 40px 0 20px 0;
 			}
 
-			
 			  #footer .article-d-none{
 				display:block
 				}
 				.m-n{
 					margin-bottom:-25px !important
 				}
-
 	}
+
+
 
 	/* extra */
 
