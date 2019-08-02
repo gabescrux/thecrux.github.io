@@ -10,11 +10,14 @@ $(document).ready(function(){
         });
      });
      $("#articleSearchInput").click(function() {
-      var x = document.getElementById("articles-li");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
+      document.getElementById("articles-li").style.display = "block";
      });
 });
+
+
+// var x = document.getElementById("articles-li");
+//       if (x.style.display === "block") {
+//         x.style.display = "none";
+//       } else {
+//         x.style.display = "block";
+//       }
