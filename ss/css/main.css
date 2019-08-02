@@ -203,7 +203,7 @@ input, select, textarea {
 
 	a {
 		color: #000;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -1873,11 +1873,6 @@ input, select, textarea {
 	.search-icon{
 		margin:0px 0px 0px -30px
 		}
-
-		header div{
-			border:solid black 1px
-		}
-
 /* Header */
 
 .img-fluid {
