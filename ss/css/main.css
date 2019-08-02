@@ -159,6 +159,11 @@ input, select, textarea {
 		background-color:#26619c
 	}
 
+	.noscirpt{
+		background-color:#26619c;
+		color:#fff
+	}
+
 	.c-b{
 		color:#26619c
 	}
