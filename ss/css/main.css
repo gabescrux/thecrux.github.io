@@ -159,13 +159,6 @@ input, select, textarea {
 		background-color:#26619c
 	}
 
-	noscirpt{
-		width:100%;
-		background-color:#26619c;
-		color:#fff;
-		text-align:center
-	}
-
 	.c-b{
 		color:#26619c
 	}
@@ -2692,9 +2685,7 @@ display:none
 			  #footer .article-d-none{
 				display:block
 				}
-				.m-n{
-					margin-bottom:-25px !important
-				}
+				
 	}
 
 

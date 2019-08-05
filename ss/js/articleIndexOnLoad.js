@@ -9,15 +9,17 @@ $(document).ready(function(){
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
      });
-     $("#articleSearchInput").click(function() {
-      document.getElementById("articles-li").style.display = "block";
-     });
 });
 
+$("#articleSearchInput").click(function() {
+  document.getElementById("articles-li").style.display = "block";
+ });
 
-// var x = document.getElementById("articles-li");
-//       if (x.style.display === "block") {
-//         x.style.display = "none";
-//       } else {
-//         x.style.display = "block";
-//       }
+ $("#searchBurger").click(function() {
+  var x = document.getElementById("articles-li");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+ });

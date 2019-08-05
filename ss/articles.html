@@ -9,14 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/jquery.min.js"></script>
-    <style>
-    noscirpt{
-		width:100%;
-		background-color:#26619c;
-		color:#fff;
-		text-align:center
-	}
-    </style>
 
 </head>
 <body>
@@ -36,21 +28,31 @@
                                 <h3 class="text-center">Search For Articles:</h3>
                             </div>
                             <div class="col-4 col-3-medium col-12-small"></div>
-                            <div class="col-4 col-6-medium col-12-small" style="border-radius:50px">
+                            <div class="col-4 col-6-medium col-12-small mb-4" style="border-radius:50px">
                                 <input id="articleSearchInput" type="text" placeholder="Auto Search..."><i class="search-icon fas fa-search"></i>
                             </div>
                             <div class="col-4 col-3-medium col-12-small"></div>
                         </div>
                         
-                        <br/>
-                        <!-- <i style="padding:5px;border-radius:100px;background-color:lightgray;margin:0 auto;"class="fas fa-stream"></i> -->
+                       
                     </header>
                     <section id="articles-li" class="d-none">
-                        <ul id="articleList" style="margin:20px">
+                        <ul id="articleList">
                             <div id="web-rightSideBar"></div>
                         </ul>
+                        
                     </section>
+                    
                     </section>
+                    <div style="height:25px;width:25px;background-color:#26619c;margin:-13px 0px 0px -3px;position:absolute;left:50%"></div>
+                    <input type="checkbox" id="search"/>
+                    <label id="searchBurger" style="position:absolute;border-radius:100px;margin:-10px 0px 0px 0px;left:50%;" for="search">
+                            <span class="search-line"></span>
+                            <span class="search-line"></span>
+                            <span class="search-line"></span>
+                    </label>
+                    
+                   
         </div>
         <!-- Main -->
             <section id="main">
