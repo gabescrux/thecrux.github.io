@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 $("#articleSearchInput").click(function() {
   document.getElementById("articles-li").style.display = "block";
+  $( "#search" ).prop( "checked", true );
  });
 
  $("#searchBurger").click(function() {

@@ -148,18 +148,12 @@ echo Adding article link to side bar search...
 @echo ^<li^>^<a class^="search-a" href^="%htmlfileext%" title^="%articletitle%" itemprop^="Article"^>%articletitle%^</a^>^</li^> >> %filepath%search.html
 echo .
 echo .
-echo This is what we have so far:
-echo .
-echo .
-echo Article Title: %articletitle%
-echo Article html page: %htmlfileext%
-echo Article Image chosen: %image%
-echo Article description: %description%
-echo .
-echo .
-pause
-echo .
-echo .
+
+setlocal
+:PROMPT
+SET /P yorn=Wide or square article?(Y is wide/ N is square): 
+IF /I "%yorn%" NEQ "Y" GOTO ENDyorn
+::wide
 @echo ^<div class^="col-4 col-6-medium col-12-small"^> >> %articleIndex%
 echo 		^<article^> >> %articleIndex%
 echo		    ^<div class^="article-con r"^> >> %articleIndex%
@@ -180,13 +174,32 @@ echo 				^</a^> >> %articleIndex%
 echo 			^</div^> >> %articleIndex%
 echo 		^</article^> >> %articleIndex%
 echo ^</div^> >> %articleIndex%
-echo DONE
-pause
 
+goto AREYOUSURE
+:ENDyorn
+goto square
+endlocal
 
-
-
-
-
+::square
+@echo ^<div class^="col-4 col-6-medium col-12-small"^> >> %articleIndex%
+echo 		^<article^> >> %articleIndex%
+echo		    ^<div class^="article-con r"^> >> %articleIndex%
+echo 				^<a href^="%htmlfileext%"^> >> %articleIndex%
+echo 					^<div class^="row"^> >> %articleIndex%
+echo 						^<img class^="col-12 col-12-medium col-12-small o-cover" src^="%image%"/^> >> %articleIndex%
+echo						^<div class^="article-title col-12 col-12-medium col-12-small"^> >> %articleIndex%
+echo							^<h3^>%articletitle%^</h3^> >> %articleIndex%
+echo 							^<p class^="article-d-none"^> >> %articleIndex%
+echo                       			%description% >> %articleIndex%
+echo							^</p^> >> %articleIndex%
+echo 							^<div class^="read-more"^> >> %articleIndex%
+echo								^<button^>Read More ^<i class^="fas fa-angle-double-right"^>^</i^>^</button^> >> %articleIndex%
+echo							^</div^> >> %articleIndex%
+echo						^</div^> >> %articleIndex%
+echo 						^</div^> >> %articleIndex%
+echo 				^</a^> >> %articleIndex%
+echo 			^</div^> >> %articleIndex%
+echo 		^</article^> >> %articleIndex%
+echo ^</div^> >> %articleIndex%
 
 
