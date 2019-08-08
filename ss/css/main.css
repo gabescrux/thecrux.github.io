@@ -1978,19 +1978,28 @@ input, select, textarea {
 		text-decoration:none
 	}
 
-	#main .article-title p {
+	.o-cover{
+		object-fit: cover
+	}
+
+	#main article {
+		margin:5px
+	}
+
+	#main .article-title div {
 		overflow: hidden;
 		position: relative;
 		line-height: 1.5em;
-		max-height: 6em
+		max-height: 7em;
+		padding:10px;
 	  }
-	  #main .article-title p:before {
-		content: '...';
+	  #main .article-title div:before {
+		content: '';
 		position: absolute;
 		right: 0;
 		bottom: 0;
 	  }
-	  #main.article-title p:after {
+	  #main.article-title div:after {
 		content: '';
 		position: absolute;
 		right: 0;
@@ -2016,9 +2025,7 @@ input, select, textarea {
 		background-image: linear-gradient(to bottom, transparent, #fff)
 	  }
 
-	  #main article{
-		  margin:20px
-	  }
+	  
 /* Footer */
 
 .b-bottom{
