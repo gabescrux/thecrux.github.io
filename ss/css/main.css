@@ -1859,7 +1859,8 @@ input, select, textarea {
 	}
 
 	#page-wrapper .article-search{
-		background-color:rgba(238, 238, 238, 0.426)
+		background-color:rgba(238, 238, 238, 0.426);
+		box-shadow: 0px 0px 25px lightgray inset;
 	}
 
 	.article-search input{
@@ -1983,13 +1984,36 @@ input, select, textarea {
 	}
 
 	#main article {
-		margin:5px
+		margin:5px;
+	}
+
+	#main ul li a{
+		color: #26619c
+	}
+
+	#main ul li{
+		border-bottom: solid rgb(225, 225, 225) 1px;
+	}
+
+	#main ul li:hover{
+		background-color:#f7f7f7;
+	}
+
+	#main ul li a:after{
+		content:"»";
+		float:right;
+	}
+
+	#main ul li a img{
+		height:20px;
+		width:20px;
+		margin:0px 0px -3px 0px
 	}
 
 	#main .article-title div {
 		overflow: hidden;
 		position: relative;
-		line-height: 1.5em;
+		line-height: 1.6em;
 		max-height: 7em;
 		padding:10px;
 	  }
