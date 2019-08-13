@@ -2046,7 +2046,7 @@ input, select, textarea {
 		width:30px
 	  }
 
-	  .bottom-left {
+	  .bottom-left-top-right {
 		position: absolute;
 		bottom:0;
 		margin:5px;
@@ -2056,6 +2056,10 @@ input, select, textarea {
 		overflow: hidden;
 		text-overflow: ellipsis;
 	  }
+
+	  .unhide736{
+		display:none
+		}
 	  
 /* Footer */
 
@@ -2600,6 +2604,19 @@ display:none
 					margin-top: 0;
 					font-size: 1em;
 				}
+
+				.bottom-left-top-right {
+					position: absolute;
+					top:0;
+					right:0;
+				  }
+
+				  .hide736{
+					display:none
+				  }
+				  .unhide736{
+					  display:inline-block;
+				  }
 
 		/* Divided */
 

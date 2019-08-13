@@ -155,7 +155,9 @@ echo .
 @echo ^<article class^="mb-4"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
+echo			^<div class^="position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="images/pointing2bible.jpg"/^> >> %articleIndex%
+echo			^</div^> >> %articleIndex%
 echo			^<div class^="article-descriptor"^>%postDescriptor%^</div^> >> %articleIndex%
 echo				^<div class^="article-title col-9 col-8-medium col-12-small"^> >> %articleIndex%
 echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %articleIndex%
