@@ -149,15 +149,42 @@ echo Adding article link to side bar search...
 echo .
 echo .
 set /p postDescriptor="Enter Post descriptor('Article' 'Video' 'Audio' or other..): "
+
+echo Choose small image for %postDescriptor%: 
+timeout /t 3
+set dialog="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
+set dialog=%dialog%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
+set dialog=%dialog%close();resizeTo(0,0);</script>"
+for /f "tokens=* delims=" %%p in ('mshta.exe %dialog%') do set "file=%%p"
+For %%A in ("%file%") do (
+    Set Name=%%~nxA
+)
+echo You chose: %Name%
+set image=images/%Name%
+echo .
+echo .
+
+echo Choose small image for %postDescriptor%: 
+timeout /t 3
+set dialog1="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
+set dialog1=%dialog1%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
+set dialog1=%dialog1%close();resizeTo(0,0);</script>"
+for /f "tokens=* delims=" %%p in ('mshta.exe %dialog1%') do set "file1=%%p"
+For %%A in ("%file1%") do (
+    Set Name1=%%~nxA
+)
+echo You chose: %Name1%
+set authorImage=images/icon/%Name1%
 echo .
 echo .
 
 @echo ^<article class^="mb-4"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
-echo			^<div class^="position-relative"^> >> %articleIndex%
-echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="images/pointing2bible.jpg"/^> >> %articleIndex%
-echo			^</div^> >> %articleIndex%
+echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
+echo			^<div class^="unhide736 bottom-left-top-right mr-5"^>%authorname% ^</div^> >> %articleIndex%
+echo 			^<div class^="bottom-left-top-right"^>^<img class^="author-icon" src^="%authorImage%"alt^="%authorIconAlt%"/^> >> %articleIndex%
+echo         	^<span class^="hide736"^> %authorname%^</span^>^</div^> >> %articleIndex%
 echo			^<div class^="article-descriptor"^>%postDescriptor%^</div^> >> %articleIndex%
 echo				^<div class^="article-title col-9 col-8-medium col-12-small"^> >> %articleIndex%
 echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %articleIndex%
