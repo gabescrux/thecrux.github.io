@@ -23,7 +23,7 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-border-radius:3px}
+border-radius:3px;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1999,6 +1999,9 @@ input, select, textarea {
 
 	#main ul li{
 		border-bottom: solid rgb(225, 225, 225) 1px;
+	}
+
+	.similar-resources{
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;

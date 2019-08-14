@@ -1,8 +1,7 @@
 @echo off
 :LOOP
-::set string=
-::set /p string=
-
+set "source_folder=C:\WEBSITES\thecrux.github.io\ss\images"
+set "result_folder_1=C:\WEBSITES\thecrux.github.io\ss\images\small-images"
 set /p articletitle="Article Title: "
 set htmlfile=%articleTitle: =-%
 set htmlfileext=%htmlfile%.html
@@ -14,8 +13,9 @@ set /p authorname="Enter author name (e.g. Gabriel Ulrich): "
 set /p description="Paste article description here: "
 echo.
 echo.
+:loopArticleImage
 echo CHOOSE IMAGE FOR ARTICLE: 
-timeout /t 3
+timeout /t 2
 set dialog="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
 set dialog=%dialog%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
 set dialog=%dialog%close();resizeTo(0,0);</script>"
@@ -24,6 +24,21 @@ For %%A in ("%file%") do (
     Set Name=%%~nxA
 )
 echo You chose: %Name%
+setlocal
+:PROMPT
+SET /P AREYOUSURE=KEEP PICTURE CHOICE?(Y/[N]): 
+IF /I "%AREYOUSURE%" NEQ "Y" GOTO loopArticleImage
+goto END7
+:END7
+endlocal
+set "smallImage=%source_folder%\%name%"
+echo the full path: %smallImage%
+echo.
+echo.
+pause
+for %%a in ("%smallImage%") do (
+   call scale.bat -source "%%~fa" -target "%result_folder_1%\%%~nxa" -max-height 250 
+)
 set image=images/%Name%
 set /p altimg="Alt for the image: "
 set altimg=[%altimg%]
@@ -166,23 +181,13 @@ echo.
 echo.
 
 
-::Creating article on articles.html
-echo CHOOSE SMALLER ARTICLE IMAGE FOR ARTICLES.HTML POST DESCRIPTOR: 
-timeout /t 3
-set dialog="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
-set dialog=%dialog%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
-set dialog=%dialog%close();resizeTo(0,0);</script>"
-for /f "tokens=* delims=" %%p in ('mshta.exe %dialog%') do set "file=%%p"
-For %%A in ("%file%") do (
-    Set Name=%%~nxA
-)
-echo You chose: %Name%
-set image=images/%Name%
-echo.
-echo.
 
-echo CHOOSE AUTHOR IMAGE FOR POST DESCRIPTION: 
-timeout /t 3
+set image=images/small-images/%Name%
+echo.
+echo.
+:loopAuthorImage
+echo CHOOSE AUTHOR IMAGE/ICON FOR POST DESCRIPTION: 
+timeout /t 2
 set dialog1="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
 set dialog1=%dialog1%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
 set dialog1=%dialog1%close();resizeTo(0,0);</script>"
@@ -191,6 +196,18 @@ For %%A in ("%file1%") do (
     Set Name1=%%~nxA
 )
 echo You chose: %Name1%
+set /p altimg2="Enter Author Image alt: "
+set altimg2=[%altimg2%]
+
+setlocal
+:PROMPT
+SET /P AREYOUSURE=KEEP PICTURE CHOICE?(Y/[N]): 
+IF /I "%AREYOUSURE%" NEQ "Y" GOTO loopAuthorImage
+goto END6
+:END6
+endlocal
+
+
 set authorImage=images/icon/authors/%Name1%
 for /f "delims=" %%a in ('wmic OS Get localdatetime ^| find "."') do set dt=%%a
 set year=%dt:~0,4%
@@ -242,7 +259,7 @@ ECHO "%choice%" is not valid, try again
 goto start
 
 :article
-@echo ^<article class^="mb-4"^> >> %articleIndex%
+@echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
@@ -252,7 +269,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -262,7 +279,7 @@ echo ^</article^> >> %articleIndex%
 
 goto end
 :video
-@echo ^<article class^="mb-4"^> >> %articleIndex%
+@echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
@@ -272,7 +289,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -281,7 +298,7 @@ echo ^</article^> >> %articleIndex%
 
 goto end
 :audio
-@echo ^<article class^="mb-4"^> >> %articleIndex%
+@echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
@@ -291,7 +308,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -301,7 +318,7 @@ echo ^</article^> >> %articleIndex%
 
 goto end
 :pictures
-@echo ^<article class^="mb-4"^> >> %articleIndex%
+@echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
@@ -311,7 +328,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -321,7 +338,7 @@ echo ^</article^> >> %articleIndex%
 
 goto end
 :random
-@echo ^<article class^="mb-4"^> >> %articleIndex%
+@echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
 echo 		^<div class^="row position-relative"^> >> %articleIndex%
 echo			^<img class^="col-3 col-4-medium col-12-small o-cover" src^="%image%"alt="%altimg%"/^> >> %articleIndex%
@@ -331,7 +348,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
