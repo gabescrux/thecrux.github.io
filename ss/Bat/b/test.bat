@@ -1,7 +1,6 @@
 @echo off
-::write search
-set articleindex=common\articlesIndex.html
-break > %articleindex%
+set articleIndex=a\a.html
+break > %articleIndex%
 
 @echo ^<article class^="mb-4 lightBorder"^> >> %articleIndex%
 echo    ^<a href^="%htmlfileext%"^> >> %articleIndex%
@@ -22,10 +21,11 @@ echo ^</article^> >> %articleIndex%
 
 
 
-set filename=C:\WEBSITES\thecrux.github.io\ss\articles
+set filename=b
 set ext=.html
 set inputfile=%filename%%ext%
 break > %filename%1%ext%
-Powershell.exe -executionpolicy remotesigned -File  C:\WEBSITES\thecrux.github.io\ss\Bat\fileInsert.ps1
+Powershell.exe -executionpolicy remotesigned -File  C:\WEBSITES\thecrux.github.io\ss\Bat\b\fileInsert.ps1
 del "%inputfile%"
-ren C:\WEBSITES\thecrux.github.io\ss\Bat\%filename%1%ext% %inputfile%
+ren C:\WEBSITES\thecrux.github.io\ss\Bat\b\%filename%1%ext% %inputfile%
+pause

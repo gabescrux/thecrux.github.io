@@ -7,7 +7,7 @@ set htmlfile=%articleTitle: =-%
 set htmlfileext=%htmlfile%.html
 set filepath=..\common\
 set htmlfilename=..\%htmlfile%.html
-set articleIndex=..\common\articlesIndex.html
+set articleIndex=..\TEMP\articlesIndex.html
 break > %htmlfilename%
 set /p authorname="Enter author name (e.g. Gabriel Ulrich): "
 set /p description="Paste article description here: "
@@ -235,7 +235,8 @@ If Not Defined MaS Set "MaS=%MoY%"&Set "ending=th"
 If "%MaS:~,1%"=="0" Set "MaS=%MaS:~1%"
 echo.
 echo.
-
+:: clear articlesIndex.html
+break > %articleindex%
 :start
 echo CHOOSE YOUR POST DESCRIPTOR:
 echo.
@@ -356,7 +357,21 @@ echo ^</article^> >> %articleIndex%
 
 goto end
 :end
-
+pause
+:loop1
+set filename=articles
+set ext=.html
+set inputfile=%filename%%ext%
+break > %filename%1%ext%
+Powershell.exe -executionpolicy remotesigned -File fileInsert.ps1
+echo deleting articles.html
+timeout /t 3
+del "%inputfile%"
+echo renaming articles1.html to articles.html
+timeout /t 3
+ren ..\%filename%1%ext% %inputfile%
+pause
+goto loop1
 echo COMPLETED MAKING ARTICLE FOR ARTICLES.HTML...
 pause
 
