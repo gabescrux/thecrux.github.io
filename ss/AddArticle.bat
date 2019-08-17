@@ -11,8 +11,6 @@ set filepath=common\
 set htmlfilename=%htmlfile%.html
 set articleIndex=TEMP\articlesIndex.html
 break > %htmlfilename%
-echo.
-echo.
 :loopArticleImage
 echo CHOOSE IMAGE FOR ARTICLE: 
 set dialog="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
@@ -32,8 +30,6 @@ goto END7
 endlocal
 set "smallImage=%source_folder%\%name%"
 echo the full path: %smallImage%
-echo.
-echo.
 for %%a in ("%smallImage%") do (
    call scale.bat -source "%%~fa" -target "%result_folder_1%\%%~nxa" -max-height 250 
 )
@@ -71,8 +67,52 @@ echo 		^<meta name^="twitter:description"content^="%description%"^> >> %htmlfile
 echo 		^<meta name^="twitter:image" content^="%altimg%"^> >> %htmlfilename%
 echo 	^</head^> >> %htmlfilename% 
 
+:loopAuthorImage
+echo CHOOSE AUTHOR IMAGE/ICON FOR POST DESCRIPTION: 
+set dialog1="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
+set dialog1=%dialog1%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
+set dialog1=%dialog1%close();resizeTo(0,0);</script>"
+for /f "tokens=* delims=" %%p in ('mshta.exe %dialog1%') do set "file1=%%p"
+For %%A in ("%file1%") do (
+    Set Name1=%%~nxA
+)
+echo You chose: %Name1%
+set /p altimg2="Enter Author Image alt: "
+set altimg2=[%altimg2%]
 
+setlocal
+:PROMPT
+SET /P AREYOUSURE=KEEP PICTURE CHOICE?(Y/[N]): 
+IF /I "%AREYOUSURE%" NEQ "Y" GOTO loopAuthorImage
+goto END6
+:END6
+endlocal
 
+set authorImage=images/icon/authors/%Name1%
+for /f "delims=" %%a in ('wmic OS Get localdatetime ^| find "."') do set dt=%%a
+set year=%dt:~0,4%
+set month=%dt:~4,2%
+set day=%dt:~6,2%
+if %month%==01 set monthname=January
+if %month%==02 set monthname=February
+if %month%==03 set monthname=March
+if %month%==04 set monthname=April
+if %month%==05 set monthname=May
+if %month%==06 set monthname=June
+if %month%==07 set monthname=July
+if %month%==08 set monthname=August
+if %month%==09 set monthname=September
+if %month%==10 set monthname=October
+if %month%==11 set monthname=November
+if %month%==12 set monthname=December
+Set "ToD=%DATE%"
+Set "MoY=%ToD:~-7,2%"
+If Not "%MoY:~,1%"=="1" (
+    If "%MoY:~-1%"=="1" Set "MaS=%MoY%"&Set "ending=st"
+    If "%MoY:~-1%"=="2" Set "MaS=%MoY%"&Set "ending=nd"
+    If "%MoY:~-1%"=="3" Set "MaS=%MoY%rd"&Set "ending=rd")
+If Not Defined MaS Set "MaS=%MoY%"&Set "ending=th"
+If "%MaS:~,1%"=="0" Set "MaS=%MaS:~1%"
 ::body
 echo 	^<body^> >> %htmlfilename%
 echo 		^<div id^="page-wrapper"^> >> %htmlfilename%
@@ -86,12 +126,13 @@ echo 						^<div class^="col-8 col-12-medium"^> >> %htmlfilename%
 echo 							^<^!-- Content --^> >> %htmlfilename%
 echo 							^<article class^="boxArticle post"^> >> %htmlfilename%
 echo 							^<a href^="%imghref%" class^="image featured"^>^<img src^="%image%" alt^="%altimg%" /^>^</a^> >> %htmlfilename%
-
-
+echo								^<header^> >> %htmlfilename%
+echo                                    ^<h2^>%articletitle%^</h2^> >> %htmlfilename%
+echo									^<div class^="article-author-time m-3"^> >> %htmlfilename%
+echo									^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %htmlfilename%
+echo                                ^</header^> >> %htmlfilename%
 
 ::article content
-echo.
-echo.
 echo Choose an ARTICLE with ext of .html:
 set dialog="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
 set dialog=%dialog%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
@@ -104,7 +145,6 @@ type %file% >> %htmlfilename%
 
 
 ::footer & javascript
-echo Writing...
 echo 							^</article^> >> %htmlfilename%
 echo 						^</div^> >> %htmlfilename%
 echo 						^<^!-- Sidebar --^> >> %htmlfilename%
@@ -173,63 +213,8 @@ goto LOOP
 endlocal
 :YES
 @echo ^<li^>^<a class^="search-a" href^="%htmlfileext%" title^="%articletitle%" itemprop^="Article"^>%articletitle%^</a^>^</li^> >> %filepath%search.html
-echo.
-echo.
-
-
 
 set image=images/small-images/%Name%
-echo.
-echo.
-:loopAuthorImage
-echo CHOOSE AUTHOR IMAGE/ICON FOR POST DESCRIPTION: 
-set dialog1="about:<input type=file id=FILE><script>FILE.click();new ActiveXObject
-set dialog1=%dialog1%('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);
-set dialog1=%dialog1%close();resizeTo(0,0);</script>"
-for /f "tokens=* delims=" %%p in ('mshta.exe %dialog1%') do set "file1=%%p"
-For %%A in ("%file1%") do (
-    Set Name1=%%~nxA
-)
-echo You chose: %Name1%
-set /p altimg2="Enter Author Image alt: "
-set altimg2=[%altimg2%]
-
-setlocal
-:PROMPT
-SET /P AREYOUSURE=KEEP PICTURE CHOICE?(Y/[N]): 
-IF /I "%AREYOUSURE%" NEQ "Y" GOTO loopAuthorImage
-goto END6
-:END6
-endlocal
-
-
-set authorImage=images/icon/authors/%Name1%
-for /f "delims=" %%a in ('wmic OS Get localdatetime ^| find "."') do set dt=%%a
-set year=%dt:~0,4%
-set month=%dt:~4,2%
-set day=%dt:~6,2%
-if %month%==01 set monthname=January
-if %month%==02 set monthname=February
-if %month%==03 set monthname=March
-if %month%==04 set monthname=April
-if %month%==05 set monthname=May
-if %month%==06 set monthname=June
-if %month%==07 set monthname=July
-if %month%==08 set monthname=August
-if %month%==09 set monthname=September
-if %month%==10 set monthname=October
-if %month%==11 set monthname=November
-if %month%==12 set monthname=December
-Set "ToD=%DATE%"
-Set "MoY=%ToD:~-7,2%"
-If Not "%MoY:~,1%"=="1" (
-    If "%MoY:~-1%"=="1" Set "MaS=%MoY%"&Set "ending=st"
-    If "%MoY:~-1%"=="2" Set "MaS=%MoY%"&Set "ending=nd"
-    If "%MoY:~-1%"=="3" Set "MaS=%MoY%rd"&Set "ending=rd")
-If Not Defined MaS Set "MaS=%MoY%"&Set "ending=th"
-If "%MaS:~,1%"=="0" Set "MaS=%MaS:~1%"
-echo.
-echo.
 :: clear articlesIndex.html
 break > %articleindex%
 :start
@@ -261,7 +246,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -281,7 +266,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -300,7 +285,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -320,7 +305,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
@@ -340,7 +325,7 @@ echo					^<div class^="article-d-none"^> ^<h3^>%articletitle%^</h3^> >> %article
 echo						^<p^>%description%^</p^> >> %articleIndex% 
 echo					^</div^> >> %articleIndex%
 echo 					^<div class^="article-author-time"^> >> %articleIndex% 
-echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname%, %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
+echo						^<img class^="author-icon" src^="%authorImage%"alt^="%altimg2%"/^> %authorname% ^<time^>%monthname% %MaS%^<sup^>%ending%^</sup^>^</time^>^</div^> >> %articleIndex% 
 echo				^</div^> >> %articleIndex%
 echo			^</div^> >> %articleIndex%
 echo 	^</a^> >> %articleIndex%
