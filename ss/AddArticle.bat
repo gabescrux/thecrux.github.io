@@ -339,9 +339,12 @@ set ext=.html
 set inputfile=%filename%%ext%
 break > %filename%1%ext%
 Powershell.exe -executionpolicy remotesigned -File fileInsert.ps1
-echo deleting articles.html
 del "%inputfile%"
-echo renaming articles1.html to articles.html
 ren %filename%1%ext% %inputfile%
-echo COMPLETED MAKING ARTICLE FOR ARTICLES.HTML...
+
+break > %filename%1%ext%
+Powershell.exe -executionpolicy remotesigned -File utf8.ps1
+del "%inputfile%"
+ren %filename%1%ext% %inputfile%
+echo COMPLETED...
 pause
