@@ -10,165 +10,83 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	  <link rel="stylesheet" href="css/style.css">
 	  <!-- <link rel="stylesheet" href="css/menuCircle.css"> -->
+	  <style>
+	  /*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+
+
+/* Presentational styles */
+
+body {
+  background: #efefef;
+  padding: 1.5rem;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+li {
+	list-style: none;
+  padding: 1.5rem .5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background: #eb4d4b;
+  color: #ffffff;
+  margin: 2px;
+}
+li:hover {
+  margin: 0px;
+  border: solid black 2px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  padding: 1.4rem .4rem;
+  cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
 	  
+	  </style>
 </head>
-	<body id="top" class="gabe ">
+	<body >
+
 			<center>	
 					<h1 style="font-size: 60px;" id="shadow" class="title titleGlow">Gabe's Hub</h1>
 					
 				</center>
+
+
+
+				
 	<br/>
-						<div class="menueItems font-size-lg"><center>
-								<div class="tooltip">
-								<a class="blinking" href="index.html"><i class="fas fa-cross"></i></a>
-								<span class="tooltiptext">Home</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="www.falsehope.gq"><i class="fas fa-cloud"></i></a>
-								<span class="tooltiptext">FalseHope.gq</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="www.cashmoney.gq"><i class="fas fa-money-bill-wave"></i></a>
-								<span class="tooltiptext">CashMoney.gq</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="www.unbroken.ga"><i class="fas fa-fish"></i></a>
-								<span class="tooltiptext">Unbroken.ga</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://docs.google.com/spreadsheets/d/1Qxknjz3cVlFlGkx1JxGg1wB3F97SSP6bOmWSsn334rE/edit#gid=0"><i class="fas fa-unlock-alt"></i></a>
-								<span class="tooltiptext">Password</span>
-								</div>
-								&nbsp;
 
-								<div class="tooltip">
-								<a class="" href="https://www.aol.com/"><i class="fas fa-at"></i></a>
-								<span class="tooltiptext">AOL</span>
-								</div>
-								&nbsp;
-								<br/><br/>
-								<div class="tooltip">
-								<a class="" href="https://www.yahoo.com"><i class="fas fa-mail-bulk"></i></a>
-								<span class="tooltiptext">YAHOO</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fas fa-envelope"></i></a>
-								<span class="tooltiptext">G-Mail</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-								<span class="tooltiptext">Facebook</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.pinterest.com"><i class="fab fa-pinterest-square"></i></a>
-								<span class="tooltiptext">Pinterest</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-								<span class="tooltiptext">Instagram</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.imgur.com"><i class="fas fa-images"></i></a>
-								<span class="tooltiptext">Imgur</span>
-								</div>
-								&nbsp;
-								<br/><br/>
-								<div class="tooltip">
-								<a class="" href="https://www.reddit.com"><i class="fab fa-reddit-square"></i></a>
-								<span class="tooltiptext">Reddit</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.tumblr.com"><i class="fab fa-tumblr-square"></i></a>
-								<span class="tooltiptext">tumblr</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-								<span class="tooltiptext">Twitter</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.netflix.com"><i class="fas fa-tv"></i></a>
-								<span class="tooltiptext">Netflix</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
-								<span class="tooltiptext">Youtube</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://123movie.cc/"><i class="fas fa-video"></i></a>
-								<span class="tooltiptext">123 Movies</span>
-								</div>
-								&nbsp;
- <br/><br/>
-								<div class="tooltip">
-								<a class="" href="https://www.disneyplus.com/"><i class="fas fa-tv"></i></a>
-								<span class="tooltiptext">Disney +</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.sonycrackle.com/movies"><i class="fas fa-film"></i></a>
-								<span class="tooltiptext">SONY Crackle</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.imdb.com"><i class="fab fa-imdb"></i></a>
-								<span class="tooltiptext">IMDB</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="https://www.rottentomatoes.com/browse/in-theaters/"><i class="fas fa-file-video"></i></a>
-								<span class="tooltiptext">Rotten Tomatoes</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="stocks.html"><i class="fas fa-chart-line"></i></a>
-								<span class="tooltiptext">Stocks</span>
-								</div>
-								&nbsp;
-								
-								<div class="tooltip">
-								<a class="" href="messengerTest.html"><i class="fas fa-comments"></i></a>
-								<span class="tooltiptext">Message</span>
-								</div>
-								&nbsp;
-								
-							</center></div>	
 
-			
-		
+	<ul class="auto-grid">
+			<li><a href="https://docs.google.com/spreadsheets/d/1Qxknjz3cVlFlGkx1JxGg1wB3F97SSP6bOmWSsn334rE/edit#gid=0"><i class="fas fa-unlock-alt"></i> Accounts</a></li>
+			<li><a href="https://login.aol.com/?done=https%3A%2F%2Fapi.login.aol.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9ZXRrOURhMkt6bkl5JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWQ2%26redirect_uri%3Dhttps%253A%252F%252Foidc.www.aol.com%252Fcallback%26response_type%3Dcode%26scope%3Dmail-r%2520openid%2520openid2%2520sdps-r%26src%3Dfp-us%26intl%3Dus%26state%3DeyJhbGciOiJSUzI1NiIsImtpZCI6IjZmZjk0Y2RhZDExZTdjM2FjMDhkYzllYzNjNDQ4NDRiODdlMzY0ZjcifQ.eyJyZWRpcmVjdFVyaSI6Imh0dHBzOi8vd3d3LmFvbC5jb20vIn0.hlDqNBD0JrMZmY2k9lEi6-BfRidXnogtJt8aI-q2FdbvKg9c9EhckG0QVK5frTlhV8HY7Mato7D3ek-Nt078Z_i9Ug0gn53H3vkBoYG-J-SMqJt5MzG34rxdOa92nZlQ7nKaNrAI7K9s72YQchPBn433vFbOGBCkU_ZC_4NXa9E%26nonce%3DwJpg2Vf16daQfrkJ5UU5aUyr47QHJWhD&src=fp-us&crumb=CkehTOnYnrS&redirect_uri=https%3A%2F%2Foidc.www.aol.com%2Fcallback&intl=us&client_id=dj0yJmk9ZXRrOURhMkt6bkl5JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWQ2">
+				<i class="fas fa-at"></i> AOL</a></li>
+			<li><a href="https://login.yahoo.com/config/login?.src=fpctx&.intl=us&.lang=en-US&.done=https://www.yahoo.com">
+				<i class="fas fa-mail-bulk"></i> YAHOO</a></li>
+			<li><a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+				<i class="fas fa-envelope"></i> G-MAIL</a></li>
+			<li><a href="https://www.netflix.com"><i class="fas fa-tv"></i> Netflix</a></li>
+			<li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i> Youtube</a></li>
+			<li><a href="https://123movie.cc/"><i class="fas fa-video"></i> 123Movie</a></li>
+			<li><a href="https://www.disneyplus.com/"><i class="fas fa-tv"></i> Disney +</a></li>
+			<li><a href="https://www.tradingview.com/symbols/NASDAQ-TQQQ/"><i class="fas fa-chart-line"></i> Stocks</a></li>
 
-		<!-- <script  src="js/index.js"></script> -->
+		  </ul>
+
 	</body >
 </html>
 
